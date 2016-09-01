@@ -25,6 +25,7 @@ gem 'gibbon'
 gem 'high_voltage'
 gem 'sendgrid'
 gem 'simple_form'
+gem "font-awesome-rails"
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
