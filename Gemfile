@@ -18,7 +18,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'foundation-rails', '~> 5.5'
+#gem 'foundation-rails', '~> 5.5'
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'gibbon'
 gem 'high_voltage'
 gem 'sendgrid'
