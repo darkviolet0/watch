@@ -20,6 +20,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'foundation-rails', '~> 5.5'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'gibbon'
 gem 'high_voltage'
 gem 'sendgrid'
@@ -27,6 +28,9 @@ gem 'simple_form'
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
+end
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
 end
 group :development, :test do
   gem 'sqlite3'
