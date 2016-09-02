@@ -16,6 +16,4 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require_tree .
-//$(function() {
-  //$(document).foundation();
-//});
+

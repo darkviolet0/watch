@@ -30,3 +30,73 @@
 			</div><!-- /.footer-section -->
 		</footer><!-- /#footer-section -->
 <!-- Footer Section End -->
+
+
+
+		<script type="text/javascript">
+
+			/*---------------------- Current Menu Item -------------------------*/
+			jQuery(document).ready(function($) {
+				"use strict";
+
+				$('#main-menu #headernavigation').onePageNav({
+					currentClass: 'active',
+					changeHash: false,
+					scrollSpeed: 750,
+					scrollThreshold: 0.5,
+					scrollOffset: 60,
+					filter: '',
+					easing: 'swing'
+				}); 
+
+				$('#event_time_countdown').countDown({
+					targetDate: {
+						'day': 23,
+						'month': 9,
+						'year': 2014,
+						'hour': 0,
+						'min': 0,
+						'sec': 0
+					},
+					omitWeeks: true
+				});
+
+
+				/*----------- Google Map - with support of gmaps.js ----------------*/
+				function isMobile() { 
+					return ('ontouchstart' in document.documentElement);
+				}
+
+				function init_gmap() {
+					if ( typeof google == 'undefined' ) return;
+					var options = {
+						center: [23.709921, 90.407143],
+						zoom: 15,
+						mapTypeControl: true,
+						mapTypeControlOptions: {
+							style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+						},
+						navigationControl: true,
+						scrollwheel: false,
+						streetViewControl: true
+					}
+
+					if (isMobile()) {
+						options.draggable = false;
+					}
+
+					$('#googleMaps').gmap3({
+						map: {
+							options: options
+						},
+						marker: {
+							latLng: [23.709921, 90.407143],
+							options: { icon: 'assets/images/mapicon.png' }
+						}
+					});
+				}
+
+				init_gmap();
+
+			});
+		</script>
