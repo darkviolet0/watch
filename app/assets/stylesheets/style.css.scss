@@ -1,17 +1,3 @@
-/*------------------------------------------------------------------- /
-
-Theme Name: Heal 
-Theme URI: http://codexcoder.com/
-Author: CodexCoder
-Author URI: http://codexcoder.com/
-Description: Heal is a one page html template
-Version: 1.0.2
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: html, themplate, ccr, Heal
-
---------------------------------------------------------------------- */
-
 
 /* Table of contents
 ---------------------------------------------------------------------- /
@@ -179,7 +165,7 @@ time {
 
 .pattern {
 	background-color: rgba(0,0,0,.7);
-	background-image: url(../images/pattern.png);
+	background-image: url(asset-path("logo.png"));
 }
 
 .meida-container {
@@ -546,32 +532,32 @@ time {
 	font-weight: 700;
 }
 #top-section {
-	background: url(../../images/background/top-section-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/top-section-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
 #about-parallax {
-	background: url(../../images/background/about-parallax-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/about-parallax-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
 #next-event {
-	background: url(../../images/background/event-section-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/event-section-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
 #testimonial {
-	background: url(../../images/background/testimonial-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/testimonial-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
 #tweet-section {
-	background: url(../../images/background/tweet-section-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/tweet-section-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
 #clients {
-	background: url(../../images/background/clients-bg.jpg) 50% 0 no-repeat fixed;
+	background: url(asset-path("background/clients-bg.jpg")) 50% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -1463,12 +1449,12 @@ a.donate:hover {
 	height: 50px;
 	text-align: center;
 	display: inline-block;
-	background-image: url(../images/link-hex-hover.png);
-	background-image: url(../images/link-hex.png);
+	background-image: url(asset-path("link-hex-hover.png"));
+	background-image: url(asset-path("link-hex.png"));
 	background-repeat: no-repeat;
 }
 .link-hex:hover {
-	background-image: url(../images/link-hex-hover.png);
+	background-image: url(asset-path("link-hex-hover.png"));
 }
 .link-hex span {
 	color: #8cc63e!important;

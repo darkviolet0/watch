@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'binding_of_caller'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
@@ -18,7 +19,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-#gem 'foundation-rails', '~> 5.5'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 gem 'gibbon'
