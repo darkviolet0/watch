@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  #include ActiveModel::Model
   
 
   def self.from_omniauth(auth)
