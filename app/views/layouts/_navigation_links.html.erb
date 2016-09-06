@@ -2,7 +2,6 @@
 <!-- Main navigation -->
 						<ul id="headernavigation" class="nav navbar-nav pull-right" style="z-index: 500">
 							<li><%= link_to 'About', page_path('about') %></li>
-							<li><a href="#team">Team</a></li>
 							<li><a href="#service">Service</a></li>
 							
 							<li><a href="#causes">Causes</a></li>
@@ -12,8 +11,10 @@
 							<li>
 									<% if current_user %>
     									<strong><%= current_user.name %></strong>
-    									<%= image_tag current_user.image, :alt => "profile pic", :size => "12x12", :style => "width:24px;height:24px;" %>
+    									<%= image_tag current_user.image, :alt => "profile pic", :style => "width:24px;height:24px;" %>
+    									<li>
     									<%= link_to "Sign out", signout_path, id: "sign_out" %>
+										</li>  									
   									<% else %>
     									<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   									<% end %>

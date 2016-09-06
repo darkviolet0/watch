@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require plugins
+//=require functions
 //= require turbolinks
 //= require tether
 //= require bootstrap-sprockets

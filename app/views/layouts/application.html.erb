@@ -8,21 +8,16 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Watch" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
     <%= csrf_meta_tags %>
     <!-- favicon --> 
     <%= favicon_link_tag 'favicon.ico' %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-        <%= render 'layouts/messages' %>
-
-            <%= yield %>
-      
-    </main>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
+        <%= yield %>
     <%= render 'layouts/footer' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>
