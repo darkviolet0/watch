@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905160338) do
+ActiveRecord::Schema.define(version: 20160906074306) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "provider"
@@ -18,8 +18,11 @@ ActiveRecord::Schema.define(version: 20160905160338) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "email"
+    t.string   "image"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    
   end
 
 end
