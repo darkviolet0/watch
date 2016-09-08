@@ -1,0 +1,10 @@
+# Rename this file to local_env.yml
+# Add account settings and API keys here.
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry gets set as a local environment variable.
+# This file overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: 'Your_Gmail_Username'
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+  owner_email: 'fabrice@watch.coop' 
+  secret_key_base: '2c5991fd9c404f710afeca315d82e5217500e4eaae95e9316a9ecdc13b9b3b94bdb3b33e7c82e837871f6e63011b96b6076fcd88869a8fbebd2f2c9a8bde93f0'

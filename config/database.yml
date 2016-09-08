@@ -11,11 +11,12 @@ default: &default
   database: watch
   pool: 5
   username: root
-  password: 
+  password: Floria13
 
 development:
   <<: *default
   database: watchdevelopment
+ 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,3 +28,4 @@ test:
 production:
   <<: *default
   database: watchproduction
+

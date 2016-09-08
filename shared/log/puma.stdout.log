@@ -1,0 +1,435 @@
+=== puma startup: 2016-09-07 17:15:44 +0200 ===
+[16534] * Starting control server on unix:///tmp/puma-status-1473261344291-16534
+[16534] - Worker 1 (pid: 16549) booted, phase: 0
+[16534] - Worker 0 (pid: 16547) booted, phase: 0
+[16534] - Gracefully shutting down workers...
+[16534] === puma shutdown: 2016-09-07 17:19:07 +0200 ===
+[16534] - Goodbye!
+Exiting
+=== puma startup: 2016-09-07 17:19:29 +0200 ===
+[16610] * Starting control server on unix:///tmp/puma-status-1473261569022-16610
+[16610] - Worker 0 (pid: 16617) booted, phase: 0
+[16610] - Worker 1 (pid: 16621) booted, phase: 0
+[16610] - Gracefully shutting down workers...
+[16610] === puma shutdown: 2016-09-07 17:21:17 +0200 ===
+[16610] - Goodbye!
+=== puma startup: 2016-09-07 17:36:21 +0200 ===
+[16742] * Starting control server on unix:///tmp/puma-status-1473262581477-16742
+=== puma startup: 2016-09-07 19:47:43 +0200 ===
+=== puma startup: 2016-09-07 19:47:43 +0200 ===
+=== puma startup: 2016-09-07 19:47:43 +0200 ===
+=== puma startup: 2016-09-08 10:23:21 +0200 ===
+=== puma startup: 2016-09-08 10:23:21 +0200 ===
+=== puma startup: 2016-09-08 10:23:21 +0200 ===
+[2349] Early termination of worker
+[16742] - Gracefully shutting down workers...
+=== puma startup: 2016-09-08 10:23:21 +0200 ===
+=== puma startup: 2016-09-08 10:23:21 +0200 ===
+[2353] Early termination of worker
+[16742] === puma shutdown: 2016-09-08 10:23:21 +0200 ===
+[16742] - Goodbye!
+=== puma startup: 2016-09-08 10:33:08 +0200 ===
+[26223] * Starting control server on unix:///tmp/puma-status-1473323588298-26223
+[26223] - Gracefully shutting down workers...
+[26636] Early termination of worker
+[26638] Early termination of worker
+[26223] === puma shutdown: 2016-09-08 10:34:50 +0200 ===
+[26223] - Goodbye!
+=== puma startup: 2016-09-08 10:40:03 +0200 ===
+[26692] * Starting control server on unix:///tmp/puma-status-1473324003708-26692
+[26692] - Gracefully shutting down workers...
+[30229] Early termination of worker
+[30233] Early termination of worker
+[26692] === puma shutdown: 2016-09-08 10:59:07 +0200 ===
+[26692] - Goodbye!
+=== puma startup: 2016-09-08 11:03:48 +0200 ===
+[30335] * Starting control server on unix:///tmp/puma-status-1473325428619-30335
+[30335] - Worker 1 (pid: 31483) booted, phase: 0
+[30335] - Worker 0 (pid: 31487) booted, phase: 0
+[30335] - Gracefully shutting down workers...
+[30335] === puma shutdown: 2016-09-08 11:09:51 +0200 ===
+[30335] - Goodbye!
+=== puma startup: 2016-09-08 11:09:54 +0200 ===
+[31503] * Starting control server on unix:///tmp/puma-status-1473325794259-31503
+[31503] - Worker 0 (pid: 31510) booted, phase: 0
+[31503] - Worker 1 (pid: 31514) booted, phase: 0
+[31503] - Gracefully shutting down workers...
+[31503] === puma shutdown: 2016-09-08 11:19:10 +0200 ===
+[31503] - Goodbye!
+=== puma startup: 2016-09-08 11:20:27 +0200 ===
+[31721] * Starting control server on unix:///tmp/puma-status-1473326427862-31721
+[31721] - Worker 0 (pid: 31728) booted, phase: 0
+[31721] - Worker 1 (pid: 31732) booted, phase: 0
+[31721] - Gracefully shutting down workers...
+[31721] === puma shutdown: 2016-09-08 11:26:47 +0200 ===
+[31721] - Goodbye!
+=== puma startup: 2016-09-08 11:26:52 +0200 ===
+[31930] * Starting control server on unix:///tmp/puma-status-1473326812007-31930
+[31930] - Worker 0 (pid: 31937) booted, phase: 0
+[31930] - Worker 1 (pid: 31941) booted, phase: 0
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd] Started GET "/" for 82.241.142.161 at 2016-09-08 11:27:00 +0200
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd] Processing by VisitorsController#new as HTML
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendering visitors/new.html.erb within layouts/application
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendered visitors/new.html.erb within layouts/application (1.3ms)
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendered layouts/_navigation_links.html.erb (1.3ms)
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendered layouts/_navigation.html.erb (3.6ms)
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendered layouts/_messages.html.erb (0.5ms)
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd]   Rendered layouts/_footer.html.erb (0.6ms)
+[8cf61b9d-8182-44ac-9def-d5c88f5098fd] Completed 200 OK in 17682ms (Views: 17671.7ms | ActiveRecord: 0.0ms)
+[77fe5aa9-c945-4356-9372-d982b7ade91f] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:27:18 +0200
+[6db78bad-d5d7-4eb2-8a6e-451224a37382] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:27:18 +0200
+[484a14cc-221c-4a60-9d15-1639737cea83] Started GET "/" for 82.241.142.161 at 2016-09-08 11:35:57 +0200
+[484a14cc-221c-4a60-9d15-1639737cea83] Processing by VisitorsController#new as HTML
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendering visitors/new.html.erb within layouts/application
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendered visitors/new.html.erb within layouts/application (0.5ms)
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendered layouts/_navigation_links.html.erb (0.9ms)
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendered layouts/_navigation.html.erb (1.8ms)
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendered layouts/_messages.html.erb (0.2ms)
+[484a14cc-221c-4a60-9d15-1639737cea83]   Rendered layouts/_footer.html.erb (0.1ms)
+[484a14cc-221c-4a60-9d15-1639737cea83] Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+[49838543-c6d7-4bab-9a05-c1b7c5715812] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:35:57 +0200
+[ebf2b2f8-e7e2-48c0-aaa3-7bb1e37cb51d] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:35:57 +0200
+[fd641d92-4089-443c-987e-305666d0ba64] Started GET "/favicon.ico" for 82.241.142.161 at 2016-09-08 11:36:05 +0200
+[fd641d92-4089-443c-987e-305666d0ba64]   
+[fd641d92-4089-443c-987e-305666d0ba64] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[fd641d92-4089-443c-987e-305666d0ba64]   
+[fd641d92-4089-443c-987e-305666d0ba64] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[fd641d92-4089-443c-987e-305666d0ba64] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[fd641d92-4089-443c-987e-305666d0ba64] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[fd641d92-4089-443c-987e-305666d0ba64] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[fd641d92-4089-443c-987e-305666d0ba64] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[fd641d92-4089-443c-987e-305666d0ba64] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[fd641d92-4089-443c-987e-305666d0ba64] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[fd641d92-4089-443c-987e-305666d0ba64] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[fd641d92-4089-443c-987e-305666d0ba64] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[fd641d92-4089-443c-987e-305666d0ba64] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+[5ffb8f27-4d7a-4cac-80ba-eb343c159b23] Started GET "/auth/facebook" for 82.241.142.161 at 2016-09-08 11:41:12 +0200
+[5ffb8f27-4d7a-4cac-80ba-eb343c159b23] (facebook) Request phase initiated.
+[7076bfa3-1e8e-4079-8912-8cd7e400e64b] Started GET "/auth/facebook" for 82.241.142.161 at 2016-09-08 11:41:13 +0200
+[7076bfa3-1e8e-4079-8912-8cd7e400e64b] (facebook) Request phase initiated.
+[c805c083-1445-42f7-b95d-44ebcbfac047] Started GET "/" for 82.241.142.161 at 2016-09-08 11:49:11 +0200
+[c805c083-1445-42f7-b95d-44ebcbfac047] Processing by VisitorsController#new as HTML
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendering visitors/new.html.erb within layouts/application
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendered visitors/new.html.erb within layouts/application (0.9ms)
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendered layouts/_navigation_links.html.erb (1.4ms)
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendered layouts/_navigation.html.erb (2.8ms)
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendered layouts/_messages.html.erb (0.2ms)
+[c805c083-1445-42f7-b95d-44ebcbfac047]   Rendered layouts/_footer.html.erb (0.2ms)
+[c805c083-1445-42f7-b95d-44ebcbfac047] Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+[36b0b61a-886e-4fd9-bbb6-f38a5c08208e] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:49:12 +0200
+[fd119420-5edd-4b51-a51a-3d4570233500] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:49:12 +0200
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75] Started GET "/" for 82.241.142.161 at 2016-09-08 11:49:19 +0200
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75] Processing by VisitorsController#new as HTML
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendering visitors/new.html.erb within layouts/application
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendered visitors/new.html.erb within layouts/application (0.8ms)
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendered layouts/_navigation_links.html.erb (0.8ms)
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendered layouts/_navigation.html.erb (1.7ms)
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendered layouts/_messages.html.erb (0.2ms)
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75]   Rendered layouts/_footer.html.erb (0.2ms)
+[ac6060c6-0a91-4b75-a6e9-f9867e9d2c75] Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+[ffc7eea1-96e6-4565-a5c8-648f348d6560] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:49:19 +0200
+[0a1b6458-7739-4032-b687-91869c75e13c] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:49:19 +0200
+[def470c6-ae65-4621-8a14-044896e837d5] Started GET "/" for 82.241.142.161 at 2016-09-08 11:49:22 +0200
+[def470c6-ae65-4621-8a14-044896e837d5] Processing by VisitorsController#new as HTML
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendering visitors/new.html.erb within layouts/application
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendered visitors/new.html.erb within layouts/application (0.1ms)
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendered layouts/_navigation_links.html.erb (0.4ms)
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendered layouts/_navigation.html.erb (1.0ms)
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendered layouts/_messages.html.erb (0.1ms)
+[def470c6-ae65-4621-8a14-044896e837d5]   Rendered layouts/_footer.html.erb (0.1ms)
+[def470c6-ae65-4621-8a14-044896e837d5] Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+[0483e359-6fbf-4140-9955-c8f6ee839f1b] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:49:22 +0200
+[55bb1ba9-f4d4-4fbf-86a1-eb10c32f586e] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:49:22 +0200
+[69005523-84a7-4a1e-a925-51830b6a30eb] Started GET "/" for 82.241.142.161 at 2016-09-08 11:49:24 +0200
+[69005523-84a7-4a1e-a925-51830b6a30eb] Processing by VisitorsController#new as HTML
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendering visitors/new.html.erb within layouts/application
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendered visitors/new.html.erb within layouts/application (0.4ms)
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendered layouts/_navigation_links.html.erb (0.5ms)
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendered layouts/_navigation.html.erb (1.6ms)
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendered layouts/_messages.html.erb (0.1ms)
+[69005523-84a7-4a1e-a925-51830b6a30eb]   Rendered layouts/_footer.html.erb (0.1ms)
+[69005523-84a7-4a1e-a925-51830b6a30eb] Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+[a01c93b8-7e9a-4dd3-be7b-58e1a97f873a] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:49:24 +0200
+[ac5ee0f9-84ac-49f4-b736-c425491a6038] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:49:24 +0200
+[fd661100-bc13-4577-b59c-c15907dc9f0a] Started GET "/" for 82.241.142.161 at 2016-09-08 11:51:34 +0200
+[fd661100-bc13-4577-b59c-c15907dc9f0a] Processing by VisitorsController#new as HTML
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendering visitors/new.html.erb within layouts/application
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendered visitors/new.html.erb within layouts/application (0.6ms)
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendered layouts/_navigation_links.html.erb (0.9ms)
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendered layouts/_navigation.html.erb (1.8ms)
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendered layouts/_messages.html.erb (0.1ms)
+[fd661100-bc13-4577-b59c-c15907dc9f0a]   Rendered layouts/_footer.html.erb (0.1ms)
+[fd661100-bc13-4577-b59c-c15907dc9f0a] Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+[c7b6c6ec-ad15-44ba-9b45-6dcc4ae69048] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:51:34 +0200
+[33e25ac1-56d2-4ffe-8bda-9e38a88176d8] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:51:34 +0200
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778] Started GET "/" for 82.241.142.161 at 2016-09-08 11:51:48 +0200
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778] Processing by VisitorsController#new as HTML
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendering visitors/new.html.erb within layouts/application
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendered visitors/new.html.erb within layouts/application (0.1ms)
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendered layouts/_navigation_links.html.erb (0.4ms)
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendered layouts/_navigation.html.erb (1.1ms)
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendered layouts/_messages.html.erb (0.1ms)
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778]   Rendered layouts/_footer.html.erb (0.1ms)
+[33a4fdb5-98b9-40e1-8517-c0d6773c9778] Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+[93a37d44-5568-4325-96bf-a4b587384c46] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:51:48 +0200
+[1b388160-5433-4d86-a0a2-c227b29faeda] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:51:48 +0200
+[cc20e991-ad6d-4451-b789-fa6acfa1e692] Started GET "/" for 82.241.142.161 at 2016-09-08 11:51:51 +0200
+[cc20e991-ad6d-4451-b789-fa6acfa1e692] Processing by VisitorsController#new as HTML
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendering visitors/new.html.erb within layouts/application
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendered visitors/new.html.erb within layouts/application (0.3ms)
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendered layouts/_navigation_links.html.erb (0.9ms)
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendered layouts/_navigation.html.erb (1.9ms)
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendered layouts/_messages.html.erb (0.1ms)
+[cc20e991-ad6d-4451-b789-fa6acfa1e692]   Rendered layouts/_footer.html.erb (0.1ms)
+[cc20e991-ad6d-4451-b789-fa6acfa1e692] Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+[9925d939-2226-4b54-a60a-da1328f5aba0] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:51:52 +0200
+[18a03e45-3cc5-4a67-85dc-47b06c012539] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:51:52 +0200
+[31930] - Gracefully shutting down workers...
+[31930] === puma shutdown: 2016-09-08 11:52:05 +0200 ===
+[31930] - Goodbye!
+=== puma startup: 2016-09-08 11:52:26 +0200 ===
+[32619] * Starting control server on unix:///tmp/puma-status-1473328346226-32619
+[32619] - Worker 0 (pid: 32626) booted, phase: 0
+[32619] - Worker 1 (pid: 32630) booted, phase: 0
+[3fc86610-c23f-40e6-8ec1-9837c4103476] Started GET "/" for 82.241.142.161 at 2016-09-08 11:52:40 +0200
+[3fc86610-c23f-40e6-8ec1-9837c4103476] Processing by VisitorsController#new as HTML
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendering visitors/new.html.erb within layouts/application
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendered visitors/new.html.erb within layouts/application (2.3ms)
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendered layouts/_navigation_links.html.erb (0.6ms)
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendered layouts/_navigation.html.erb (2.2ms)
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendered layouts/_messages.html.erb (0.4ms)
+[3fc86610-c23f-40e6-8ec1-9837c4103476]   Rendered layouts/_footer.html.erb (0.4ms)
+[3fc86610-c23f-40e6-8ec1-9837c4103476] Completed 200 OK in 4636ms (Views: 4626.4ms | ActiveRecord: 0.0ms)
+[cd2d5162-b839-45fc-8297-5737d5c474b1] Started GET "/assets/modernizr-053d50d74c4080cebd707e4af5c1e23bf6617ab5856a9462991c9a6cd8d8830e.js" for 82.241.142.161 at 2016-09-08 11:52:46 +0200
+[f376979f-9ecb-4410-a980-baf635b65f71] Started GET "/assets/logo-7dc59ec53b5400d5530e9a391a842d718fdf22fc56ba8f82ba8cba9be387259c.png" for 82.241.142.161 at 2016-09-08 11:52:46 +0200
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15] Started GET "/" for 82.241.142.161 at 2016-09-08 11:57:38 +0200
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15] Processing by VisitorsController#new as HTML
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendering visitors/new.html.erb within layouts/application
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendered visitors/new.html.erb within layouts/application (0.6ms)
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendered layouts/_navigation_links.html.erb (0.3ms)
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendered layouts/_navigation.html.erb (1.6ms)
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendered layouts/_messages.html.erb (0.2ms)
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15]   Rendered layouts/_footer.html.erb (0.2ms)
+[e0edd00a-9559-4be8-b977-4f6eeaa91e15] Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 11:58:15 +0200
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547] Processing by VisitorsController#new as HTML
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Parameters: {"fdf"=>nil}
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendering visitors/new.html.erb within layouts/application
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendered visitors/new.html.erb within layouts/application (0.7ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendered layouts/_navigation_links.html.erb (0.3ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendered layouts/_navigation.html.erb (6.5ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendered layouts/_messages.html.erb (0.2ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547]   Rendered layouts/_footer.html.erb (0.2ms)
+[fa2dba6b-368b-401c-bfab-a7dc8b1df547] Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:13:11 +0200
+[a4adb15a-95e8-41c0-80e9-08deb49639e0] Processing by VisitorsController#new as HTML
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Parameters: {"fdf"=>nil}
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendering visitors/new.html.erb within layouts/application
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendered visitors/new.html.erb within layouts/application (0.8ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendered layouts/_navigation_links.html.erb (0.2ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendered layouts/_navigation.html.erb (1.3ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendered layouts/_messages.html.erb (0.1ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0]   Rendered layouts/_footer.html.erb (0.1ms)
+[a4adb15a-95e8-41c0-80e9-08deb49639e0] Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+[b6a641b7-0724-437f-b6de-4882e6096566] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:14:08 +0200
+[b6a641b7-0724-437f-b6de-4882e6096566] Processing by VisitorsController#new as HTML
+[b6a641b7-0724-437f-b6de-4882e6096566]   Parameters: {"fdf"=>nil}
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendering visitors/new.html.erb within layouts/application
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendered visitors/new.html.erb within layouts/application (1.0ms)
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendered layouts/_navigation_links.html.erb (0.2ms)
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendered layouts/_navigation.html.erb (1.5ms)
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendered layouts/_messages.html.erb (0.2ms)
+[b6a641b7-0724-437f-b6de-4882e6096566]   Rendered layouts/_footer.html.erb (0.1ms)
+[b6a641b7-0724-437f-b6de-4882e6096566] Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:14:13 +0200
+[4169ad9c-e80d-4af7-803b-13eeb002c74d] Processing by VisitorsController#new as HTML
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Parameters: {"fdf"=>nil}
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendering visitors/new.html.erb within layouts/application
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendered visitors/new.html.erb within layouts/application (0.2ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendered layouts/_navigation_links.html.erb (0.1ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendered layouts/_navigation.html.erb (1.0ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendered layouts/_messages.html.erb (0.1ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d]   Rendered layouts/_footer.html.erb (0.1ms)
+[4169ad9c-e80d-4af7-803b-13eeb002c74d] Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+[32619] - Gracefully shutting down workers...
+[32619] === puma shutdown: 2016-09-08 12:22:39 +0200 ===
+[32619] - Goodbye!
+=== puma startup: 2016-09-08 12:22:45 +0200 ===
+[394] * Starting control server on unix:///tmp/puma-status-1473330165377-394
+[394] - Worker 0 (pid: 402) booted, phase: 0
+[394] - Worker 1 (pid: 407) booted, phase: 0
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:22:51 +0200
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6] Processing by VisitorsController#new as HTML
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Parameters: {"fdf"=>nil}
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendering visitors/new.html.erb within layouts/application
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendered visitors/new.html.erb within layouts/application (2.3ms)
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendered layouts/_navigation_links.html.erb (0.6ms)
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendered layouts/_navigation.html.erb (1.8ms)
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendered layouts/_messages.html.erb (0.5ms)
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6]   Rendered layouts/_footer.html.erb (0.4ms)
+[683c69dc-dc45-468d-82b8-9cfbe54a0ac6] Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+[a854dfea-c78b-4375-9014-1d519fe71c9f] Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 82.241.142.161 at 2016-09-08 12:22:52 +0200
+[a854dfea-c78b-4375-9014-1d519fe71c9f]   
+[a854dfea-c78b-4375-9014-1d519fe71c9f] ActionController::RoutingError (No route matches [GET] "/assets/fontawesome-webfont.woff"):
+[a854dfea-c78b-4375-9014-1d519fe71c9f]   
+[a854dfea-c78b-4375-9014-1d519fe71c9f] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[a854dfea-c78b-4375-9014-1d519fe71c9f] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] Started GET "/assets/fontawesome-webfont.ttf?v=4.0.3" for 82.241.142.161 at 2016-09-08 12:22:53 +0200
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917]   
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] ActionController::RoutingError (No route matches [GET] "/assets/fontawesome-webfont.ttf"):
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917]   
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[c1b2fc5a-a65f-41cc-bf74-0c8d1aa03917] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:23:06 +0200
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4] Processing by VisitorsController#new as HTML
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Parameters: {"fdf"=>nil}
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendering visitors/new.html.erb within layouts/application
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendered visitors/new.html.erb within layouts/application (0.3ms)
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendered layouts/_navigation_links.html.erb (0.2ms)
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendered layouts/_navigation.html.erb (0.8ms)
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendered layouts/_messages.html.erb (0.1ms)
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4]   Rendered layouts/_footer.html.erb (0.1ms)
+[4c34e0fd-4aa0-4aa1-87be-1a2df29a2dd4] Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+[643434ca-ebee-4baa-a208-669f850fd254] Started GET "/?fdf" for 82.241.142.161 at 2016-09-08 12:23:08 +0200
+[643434ca-ebee-4baa-a208-669f850fd254] Processing by VisitorsController#new as HTML
+[643434ca-ebee-4baa-a208-669f850fd254]   Parameters: {"fdf"=>nil}
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendering visitors/new.html.erb within layouts/application
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendered visitors/new.html.erb within layouts/application (0.2ms)
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendered layouts/_navigation_links.html.erb (0.1ms)
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendered layouts/_navigation.html.erb (0.5ms)
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendered layouts/_messages.html.erb (0.1ms)
+[643434ca-ebee-4baa-a208-669f850fd254]   Rendered layouts/_footer.html.erb (0.1ms)
+[643434ca-ebee-4baa-a208-669f850fd254] Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] Started GET "/cgi/common.cgi" for 187.160.172.153 at 2016-09-08 14:40:06 +0200
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12]   
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] ActionController::RoutingError (No route matches [GET] "/cgi/common.cgi"):
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12]   
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[43ef0b3e-ba56-45ba-b997-921be8f9fb12] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] Started GET "/stssys.htm" for 187.160.172.153 at 2016-09-08 14:40:06 +0200
+[5072052b-a7f3-417a-b0c5-f20061c1b46a]   
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] ActionController::RoutingError (No route matches [GET] "/stssys.htm"):
+[5072052b-a7f3-417a-b0c5-f20061c1b46a]   
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[5072052b-a7f3-417a-b0c5-f20061c1b46a] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8] Started GET "/" for 187.160.172.153 at 2016-09-08 14:40:07 +0200
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8] Processing by VisitorsController#new as */*
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendering visitors/new.html.erb within layouts/application
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendered visitors/new.html.erb within layouts/application (4.8ms)
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendered layouts/_navigation_links.html.erb (1.0ms)
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendered layouts/_navigation.html.erb (6.2ms)
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendered layouts/_messages.html.erb (0.8ms)
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8]   Rendered layouts/_footer.html.erb (0.7ms)
+[237cd941-5b9b-4dd6-b802-184f1a3d74e8] Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+[fd907021-7283-4d17-8bf5-80e77225aa5c] Started POST "/command.php" for 187.160.172.153 at 2016-09-08 14:40:08 +0200
+[fd907021-7283-4d17-8bf5-80e77225aa5c]   
+[fd907021-7283-4d17-8bf5-80e77225aa5c] ActionController::RoutingError (No route matches [POST] "/command.php"):
+[fd907021-7283-4d17-8bf5-80e77225aa5c]   
+[fd907021-7283-4d17-8bf5-80e77225aa5c] actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+[fd907021-7283-4d17-8bf5-80e77225aa5c] puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
