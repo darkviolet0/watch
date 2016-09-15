@@ -1,25 +1,21 @@
 <%# add navigation links to this file %>
 <!-- Main navigation -->
-						<ul id="headernavigation" class="nav navbar-nav pull-right" style="z-index: 500">
+						<ul id="headernavigation" class="nav navbar-nav pull-right">
 							<li><a href="#about">A propos</a></li>
 							<li><a href="#upcoming-events">Thématiques</a></li>
 							<li><a href="#news">News</a></li>
 							<li><a href="#contact">Nous contacter</a></li>
+						</ul> 
+
 							<li>
 									<% if current_user %>
     									<strong><%= current_user.name %></strong>
     									<%= image_tag current_user.image, :alt => "profile pic", :style => "width:24px;height:24px;" %>
-    									<li>
-    									<%= link_to "Sign out", signout_path, id: "sign_out" %>
-										</li>  									
-  									<% else %>
-    									<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  									<% end %>
-								
+    									<li><a href="/signout">Déconnexion</a></li>
+    								<% else %>
+    									<li><a href="/auth/facebook">Connexion Facebook</a></li>
+    								<% end %>
 							</li>
-						</ul> 
-
-
 						<!-- /.nav .navbar-nav -->
 
 

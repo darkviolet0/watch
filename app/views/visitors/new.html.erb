@@ -477,6 +477,104 @@
     </section><!-- /.upcoming-events -->  
     <!--Upcoming Events Section End-->
 
+<!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-section angular section-padding">
+        <div class="top-angle">
+        </div><!-- /.top-angle -->
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">
+              Contact
+            </h2>
+            <p class="section-description">
+              Actuellement au stade de prototype, nous recherchons des testeurs et contributeurs afin de mettre au point la plate-forme.
+              
+              
+            </p>
+          </div><!-- /.section-head -->
+        </div><!-- /.container -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contact-form-container">
+                <h3 class="content-title">
+                  Laissez nous un message
+                </h3>
+
+                <form class="contact-form" id="contact-form" action="email.php" method="post">
+                  <div id="name_error" class="error">
+                  <%= image_tag("email/error.png", :alt => "Error!")%>
+                    Veuillez saisir votre nom.
+                  </div><!-- /#name_error -->
+                  <div class="input-container li_user">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
+                  </div><!-- /.input-container-->
+
+                  <div id="email_error" class="error">
+                    <%= image_tag("email/error.png", :alt => "Error!")%>
+                    Veuillez saisir un E-mail valide.
+                  </div><!-- /#email_error -->
+                  <div class="input-container li_mail">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
+                  </div><!-- /.input-container -->
+
+                  <div id="message_error" class="error">
+                   <%= image_tag("email/error.png", :alt => "Error!")%>
+                    Veuillez saisir votre message.
+                  </div><!-- /#message_error -->
+                  <div class="input-container li_pen">
+                    <textarea class="form-control" id="message" name="message" cols="45" placeholder="Message" rows="6"></textarea>
+                  </div><!-- /.input-container -->
+                  
+                  <div id="mail_success" class="success">
+                  <%= image_tag("email/success.png", :alt => "Success!")%>
+                    Votre message est en route vers nous :)
+                  </div><!-- /#mail_success -->
+
+                  <div id='mail_fail' class='error'>
+                    <%= image_tag("email/error.png", :alt => "Error!")%> Nous sommes désolés une erreur s'est produite, veuillez réessayer ultérieurement..
+                  </div><!-- /#mail_fail -->
+
+                  <button type="submit" class="btn custom-btn angle-effect" id="send_message">Envoyer</button>
+                </form><!-- /.contact-form -->
+
+              </div><!-- /.contact-form-container -->
+            </div><!-- /.col-md-6 -->
+
+            <div class="col-md-6">
+              <div class="contact-info">
+                <h3 class="content-title">
+                  En complément
+                </h3>
+                <p class="content-description">
+                  Si vous oeuvrez dans une association environnementale locale ou plus globale, n'hésitez pas à nous contacter également, nous sommes toujours heureux de découvrir ce qui vous tient à coeur.
+
+Nous souhaitons également associer des partenaires d'autres pays de la communauté européenne pour développer la dimension internationale du réseau.
+                </p>
+                <address> 
+                  <ul class="contact-address">
+                    <!--<li class="fa-map-marker">
+                      13/2 Elizabeth St, Melbourne VIC 3000, Australia 
+                    </li>
+                    <li  class="fa-phone">
+                      +61 3146 8728, +61 0987 6543
+                    </li>-->
+                    <li class="fa-envelope">
+                      contact@watch.coop
+                    </li>
+                  </ul><!-- /.contact-address --> 
+                </address>
+              </div><!-- /.contact-info -->
+            </div><!-- /.col-md-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="bottom-angle">
+        </div><!-- /.bottom-angle -->
+      </div><!-- /.contact-section -->
+    </section><!-- /#contact -->
+    <!-- Contact Section End -->
 
 
 
