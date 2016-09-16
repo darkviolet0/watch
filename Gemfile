@@ -11,6 +11,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'binding_of_caller'
 gem 'omniauth'
 gem 'omniauth-facebook', '~> 4.0.0'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'devise'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
