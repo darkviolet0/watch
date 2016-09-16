@@ -1,31 +1,78 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Themes</h1>
+ <section id="top-section">
+      <div class="top-section parallax-style">
+        <div class="parallax-overlay">
+            
+        </div><!-- /.parallax-overlay -->
+      </div><!-- /.top-section -->
+    </section><!-- /#top-section -->
+    <!-- Top Slider End-->
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Short description</th>
-      <th>Long description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+ <section id="news">
+      <div class="news-section white-bg angular section-padding">
+        <div class="top-angle">
+        </div><!-- /.top-angle -->
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">
+              THEMES
+            </h2><!-- /.section-title -->
+            <p class="section-description">
+              Qu'il s'agisse de problématiques environnementales ou de proposition d'actions pour l'amélioration du cadre de vie, les thèmes se déclinent en site locaux sur lesquels la communauté peut fournir des informations objectives qui seront centralisées et serviront d'arguments et de base d'action.
+              Watch est participatif par essence, les thèmes sont créés par des membres individuels, des personnes physiques agissant seules ou dans le cadre de leur engagement associatif ou de leurs fonctions dans des organismes.
+            </p>
+          </div><!-- /.section-head -->
 
-  <tbody>
+          <div class="row">
+            <div class="news-container">
+
+
     <% @themes.each do |theme| %>
-      <tr>
-        <td><%= theme.name %></td>
-        <td><%= theme.short_description %></td>
-        <td><%= theme.long_description %></td>
-        <td><%= link_to 'Show', theme %></td>
-        <td><%= link_to 'Edit', edit_theme_path(theme) %></td>
-        <td><%= link_to 'Destroy', theme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+              <div class="news-item col-md-6 from-bottom delay-200">
+                <img class="news-item-image" src="images/news/cyclo-theme.jpg" alt="Watch Cyclo">
+                <article class="news-article">
+                  <div class="article-container">
+                    <div class="post-meta">
+                      <div class="meta-icon">
+                        <span>
+                          <i class="fa fa-picture-o"></i>
+                        </span>
+                      </div>
+
+                      <time datetime="2016-09-12">12 Sept 2016</time>
+                      <span class="name">
+                        <a href="#">Fabrice P.</a>
+                      </span>
+                      <span>
+                        <a href="#">24 Comments</a>
+                      </span>
+                    </div><!-- /.post-meta -->
+                    <div class="post-details">
+                      <h3 class="content-title"><%= theme.name %></h3>
+                      <p>
+                        <%= theme.short_description %>
+                      </p>
+                      <div>
+                        <!-- <a href="blog-single.html" class="btn custom-btn angle-effect">Plus...</a> -->
+                        <%= link_to 'Show', theme %>
+                        <%= link_to 'Edit', edit_theme_path(theme) %>
+                        <%= link_to 'Destroy', theme, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </div>
+                    </div><!-- /.post-details -->
+                  </div><!-- /.article-container -->
+                </article><!-- /.news-article -->
+              </div><!-- /.news-item -->
     <% end %>
-  </tbody>
-</table>
+    <div><%= link_to 'New Theme', new_theme_path %></div> 
 
-<br>
+            </div><!-- /.news-container -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.news-section -->
+    </section><!-- /#news -->
+<!--News Section End-->
 
-<%= link_to 'New Theme', new_theme_path %>
+
+
+
