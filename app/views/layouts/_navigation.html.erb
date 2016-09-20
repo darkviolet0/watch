@@ -1,6 +1,6 @@
 <!-- Main Menu -->
 		<div class="main-menu-container navbar-fixed-top">
-			<div id="main-menu" class="navbar navbar-default" role="navigation">
+			<div id="main-menu" class="navbar navbar-default blog-page" role="navigation">
 				<div class="container">
 					
 					<div class="navbar-header">
@@ -20,7 +20,14 @@
 					<nav class="collapse navbar-collapse">
 						<%= render 'layouts/navigation_links' %>
 					</nav> <!-- /.navbar-collapse  -->
+						<% if current_user %>
+    									<strong style="font-size: 12px"><%= current_user.name.split[0] %></strong>
+    									<a href="/signout"><%= image_tag current_user.image, :alt => "profile pic", :style => "width:24px;height:24px;" %></a>
+    									<% else %>
+    									<a href="/login" class="donate" style="font-size: 14px">Connexion</a>
+    					<% end %>
 				</div> <!-- /.container -->
 			</div><!-- /#main-menu -->
+
 		</div><!-- /.main-menu-container -->
 <!-- Main Menu End -->

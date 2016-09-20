@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916075647) do
+ActiveRecord::Schema.define(version: 20160916085128) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(version: 20160916075647) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "sites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "location"
+    t.float    "latitude",    limit: 24
+    t.float    "longitude",   limit: 24
+    t.text     "description", limit: 65535
+    t.integer  "theme_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["theme_id"], name: "index_sites_on_theme_id", using: :btree
+  end
+
   create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "short_description"
@@ -63,4 +74,5 @@ ActiveRecord::Schema.define(version: 20160916075647) do
     t.string   "image"
   end
 
+  add_foreign_key "sites", "themes"
 end

@@ -12,5 +12,5 @@
 //
 //= require turbolinks
 //= require tether
-//= require_tree .
+
 
