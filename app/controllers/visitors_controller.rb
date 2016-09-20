@@ -1,7 +1,9 @@
 class VisitorsController < ApplicationController
+before_action :set_theme, only: [:show]
 
   def new
     @visitor = Visitor.new
+    @themes = Theme.all
   end
 
   def create
@@ -20,5 +22,7 @@ class VisitorsController < ApplicationController
   def secure_params
     params.require(:visitor).permit(:email)
   end
+
+
 
 end

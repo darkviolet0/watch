@@ -9,7 +9,7 @@
     </section><!-- /#top-section -->
     <!-- Top Slider End-->
 
- <section id="news">
+ <section id="news" style="padding-top= 160px">
       <div class="news-section white-bg angular section-padding">
         <div class="top-angle">
         </div><!-- /.top-angle -->
@@ -30,7 +30,7 @@
 
     <% @themes.each do |theme| %>
               <div class="news-item col-md-6 from-bottom delay-200">
-                <img class="news-item-image" src="images/news/cyclo-theme.jpg" alt="Watch Cyclo">
+                <img class="news-item-image" src="images/news/<%= theme.id %>.jpg" alt="<%= theme.name%>">
                 <article class="news-article">
                   <div class="article-container">
                     <div class="post-meta">
@@ -40,7 +40,7 @@
                         </span>
                       </div>
 
-                      <time datetime="2016-09-12">12 Sept 2016</time>
+                      <time datetime="2016-09-12"><%= l(theme.created_at, :format => '%d %B %Y') %></time>
                       <span class="name">
                         <a href="#">Fabrice P.</a>
                       </span>

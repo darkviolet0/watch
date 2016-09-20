@@ -14,6 +14,7 @@ gem 'omniauth-facebook', '~> 4.0.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
+gem 'rails-i18n'
 group :development, :test do
   gem 'byebug', platform: :mri
 end

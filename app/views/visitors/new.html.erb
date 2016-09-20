@@ -221,10 +221,15 @@
             </p>
           </div><!-- /.section-head -->
 
+
+
+
           <div class="row">
             <div class="news-container">
+
+      <% @themes.each do |theme| %>
               <div class="news-item col-md-6 from-bottom delay-200">
-                <img class="news-item-image" src="images/news/cyclo-theme.jpg" alt="Watch Cyclo">
+                <img class="news-item-image" src="images/news/<%= theme.id %>.jpg" alt="<%= theme.name %>">
                 <article class="news-article">
                   <div class="article-container">
                     <div class="post-meta">
@@ -243,9 +248,9 @@
                       </span>
                     </div><!-- /.post-meta -->
                     <div class="post-details">
-                      <h3 class="content-title">Watch Cyclo</h3>
+                      <h3 class="content-title"><%= theme.name %></h3>
                       <p>
-                        ‘Watch-Cyclo’ est un service participatif en ligne pour renforcer la mobilisation citoyenne pour la promotion du vélo, et exprimer la  perception de la communauté par rapport aux enjeux des politiques cyclables urbaines.
+                        <%= theme.short_description %>
                       </p>
                       <div>
                         <a href="blog-single.html" class="btn custom-btn angle-effect">Plus...</a>
@@ -254,73 +259,13 @@
                   </div><!-- /.article-container -->
                 </article><!-- /.news-article -->
               </div><!-- /.news-item -->
+      <% end %>
 
-              <div class="news-item col-md-6 from-bottom delay-600">
-                <img class="news-item-image" src="images/news/water-theme.jpg" alt="Qualité de l'eau">
-                <article class="news-article">
-                  <div class="article-container">
-                    <div class="post-meta">
-                      <div class="meta-icon">
-                        <span>
-                          <i class="fa fa-picture-o"></i>
-                        </span>
-                      </div>
-                      <time datetime="2016-09-12">12 Sept 2016</time>
-                      <span class="name">
-                        <a href="#">Fabrice P.</a>
-                      </span>
-                      <span>
-                        <a href="#">24 Comments</a>
-                      </span>
-                    </div><!-- /.post-meta -->
-                    <div class="post-details">
-                      <h3 class="content-title">Qualité de l'eau</h3>
-                      <p>
-                        Amélioration de la qualité des systèmes d'eau et d'assainissement, mesures et contrôles de polluants et composés chimiques non testés.
-                      </p>
-                      <div>
-                        <a href="blog-single.html" class="btn custom-btn angle-effect">Plus...</a>
-                      </div>
-                    </div><!-- /.post-details -->
-                  </div><!-- /.article-container -->
-                </article><!-- /.news-article -->
-              </div><!-- /.news-item -->
-
-              <div class="news-item col-md-6 from-bottom delay-200">
-                <img class="news-item-image" src="images/news/ocean-theme.jpg" alt="Protection de l'océan">
-                <article class="news-article">
-                  <div class="article-container">
-                    <div class="post-meta">
-                      <div class="meta-icon">
-                        <span>
-                          <i class="fa fa-picture-o"></i>
-                        </span>
-                      </div>
-                      <time datetime="2016-09-12">12 Sept 2016</time>
-                      <span class="name">
-                        <a href="#">Fabrice P.</a>
-                      </span>
-                      <span>
-                        <a href="#">24 Comments</a>
-                      </span>
-                    </div><!-- /.post-meta -->
-                    <div class="post-details">
-                      <h3 class="content-title">Protection de l'océan</h3>
-                      <p>
-                        La protection des océans, du littoral et de ses usagers peut passer par des campagnes de mesures du nombre de déchets, de la qualité de l'eau et des effets du changement climatique. Ces informations transmises aux pouvoirs publics locaux entrainent une prise de conscience supplémentaire et une action ciblée.
-                      </p>
-                      <div>
-                        <a href="blog-single.html" class="btn custom-btn angle-effect">Plus...</a>
-                      </div>
-
-                    </div><!-- /.post-details -->
-                  </div><!-- /.article-container -->
-                </article><!-- /.news-article -->
-              </div><!-- /.news-item -->
+              
 
 
               <div class="view-all">
-                <a href="blog-page.html" class="btn custom-btn angle-effect">Tous les thèmes</a>
+                <a href="/themes" class="btn custom-btn angle-effect">Tous les thèmes</a>
               </div>
             </div><!-- /.news-container -->
           </div><!-- /.row -->
