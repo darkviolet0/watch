@@ -15,8 +15,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
 gem 'rails-i18n'
-gem 'rgeo'
-gem 'activerecord-mysql2spatial-adapter'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
