@@ -1,19 +1,73 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @theme.name %>
-</p>
+ <div class="container blog-page-container">
+      <div class="row">
+        
 
-<p>
-  <strong>Short description:</strong>
-  <%= @theme.short_description %>
-</p>
+       <section id="news">
+            <div class="news-section white-bg angular section-padding">
+              
+              <div class="container">
+                <div class="row">
+                  <div class="news-container">
+      		      <div class="news-item  from-bottom delay-200">
+               
+                 <img class="news-item-image" src="/images/news/<%= @theme.id %>.jpg" alt="<%= @theme.name%>">
+                    
+                      <article class="news-article">
+                        <div class="article-container">
+                          <div class="post-meta">
+                            <div class="meta-icon">
+                              <span>
+                                <i class="fa fa-picture-o"></i>
+                              </span>
+                            </div>
 
-<p>
-  <strong>Long description:</strong>
-  <%= @theme.long_description %>
-</p>
+                            <time><%= l(@theme.created_at, :format => '%d %B %Y') %></time>
+                            <span class="name">
+                              <a href="#">Fabrice P.</a>
+                            </span>
+                            <span>
+                              <a href="#">24 Comments</a>
+                            </span>
+                          </div><!-- /.post-meta -->
+                          <div class="post-details">
+                            <h3 class="content-title"><%= @theme.name %></h3>
+                              <%= @theme.short_description %>
+                          </div><!-- /.post-details -->
+                        </div><!-- /.article-container -->
+                      </article><!-- /.news-article -->
+                    </div><!-- /.news-item -->
+          
+          
+                                <%= @theme.site.each do |site| %>
+                                    <%= link_to(site) do%>
+                                      <div id="team-slider"  class="owl-carousel owl-theme">
+                                        <div class="item">
+                                          <div class="team-member-box from-bottom delay-200">
+                                            <figure>
+                                              <img src="/images/team-member/<%= site.id %>.jpg" alt="<%= site.location %>">
+                                            </figure>
+                                            <h3 class="member-name"><%= site.location %></h3>
+                                            <h4 class="member-designation">France</h4>
+                                            <p class="member-description">
+                                              <%= site.description %>
+                                            </p><!-- /.member-description -->
+                                          </div><!-- /.team-member-box -->
+                                        </div><!-- /.item -->
+                                  <% end %>  
+                                <% end %>      
 
-<%= link_to 'Edit', edit_theme_path(@theme) %> |
-<%= link_to 'Back', themes_path %>
+                  </div><!-- /.news-container -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </div><!-- /.news-section -->
+
+          </section><!-- /#news -->
+      <!--News Section End-->
+
+    
+  </div>
+</div>
+
+
