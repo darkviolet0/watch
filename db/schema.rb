@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916085128) do
+ActiveRecord::Schema.define(version: 20160922142624) do
 
-  create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "postgis"
+
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
-    t.text     "body",          limit: 65535
-    t.string   "resource_id",                 null: false
-    t.string   "resource_type",               null: false
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
     t.string   "author_type"
     t.integer  "author_id"
     t.datetime "created_at"
@@ -26,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160916085128) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
   end
 
-  create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -43,26 +47,38 @@ ActiveRecord::Schema.define(version: 20160916085128) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "sites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "cycle_tracks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "typology"
+    t.string   "side"
+    t.geometry "geometry",   limit: {:srid=>0, :type=>"line_string"}
+    t.point    "point"
+    t.boolean  "wood"
+    t.integer  "district"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+  end
+
+  create_table "sites", force: :cascade do |t|
     t.string   "location"
-    t.float    "latitude",    limit: 24
-    t.float    "longitude",   limit: 24
-    t.text     "description", limit: 65535
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description"
     t.integer  "theme_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["theme_id"], name: "index_sites_on_theme_id", using: :btree
   end
 
-  create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.string   "short_description"
-    t.text     "long_description",  limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.text     "long_description"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
     t.string   "name"

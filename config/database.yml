@@ -5,13 +5,14 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+  adapter: postgis
   encoding: utf8
   reconnect: false
   database: watch
   pool: 5
-  username: root
-  password: 
+  username: Fabrice
+  password: arcadina
+  schema_search_path: "public,postgis"
 
 development:
   <<: *default

@@ -1,0 +1,2 @@
+class CycleTrack < ApplicationRecord
+end

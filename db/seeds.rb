@@ -5,4 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+
+#Theme.create(name: 'Watch Cyclo', short_description: '‘Watch-Cyclo’ est un service participatif en ligne pour renforcer la mobilisation citoyenne pour la promotion du vélo, et exprimer la perception de la communauté par rapport aux enjeux des politiques cyclables urbaines.')
+
+#Site.create(location: 'Bordeaux', latitude: '-0.56667', longitude: '44.8333', description: 'A ce jour, le réseau des pistes et bandes cyclables dépasse les 200 km dans Bordeaux intra-muros, soit le tiers du réseau de l\'agglomération. Et il n\'est pas un mois sans que de nouveaux itinéraires soient aménagés.', theme_id: 1, created_at: '2016-09-16 09:08:23', updated_at: '2016-09-16 09:08:23')
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'sigpistescycl-Bordeaux.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  cd = cycle_data.new
+  cd.id = row['CLE']
+  cd.type = row['NATURE']
+  cd.name = row['NOM']
+  cd.side = row['SITUATION']
+  cd.geometry = row['GEOMETRIE']
+  cd.point = row['X_LONG'] + row['Y_LAT']
+  cd.save
+  puts "#{cd.name} saved"
+end
+
+puts "There are now #{cycle_data.count} rows in the cycle_data table"
+
+
