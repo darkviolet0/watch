@@ -5,7 +5,7 @@ class CreateCycleTracks < ActiveRecord::Migration[5.0]
       t.string :typology
       t.string :side
       t.line_string :geometry
-      t.point :point
+      t.st_point :point
       t.boolean :wood
       t.integer :district
 

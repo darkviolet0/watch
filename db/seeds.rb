@@ -12,20 +12,21 @@
 
 require 'csv'
 
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'sigpistescycl-Bordeaux.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv = CSV.parse(csv_text, :headers => true, :col_sep => ";")
 csv.each do |row|
-  cd = cycle_data.new
+  cd = CycleTrack.new
   cd.id = row['CLE']
-  cd.type = row['NATURE']
+  cd.typology = row['NATURE']
   cd.name = row['NOM']
   cd.side = row['SITUATION']
   cd.geometry = row['GEOMETRIE']
-  cd.point = row['X_LONG'] + row['Y_LAT']
+  cd.point = "POINT(" + row['X_LONG'].to_s + "," + row['Y_LAT'].to_s + ")"
   cd.save
   puts "#{cd.name} saved"
 end
 
-puts "There are now #{cycle_data.count} rows in the cycle_data table"
+puts "There are now #{CycleTrack.count} rows in the cycle_data table"
 
 
