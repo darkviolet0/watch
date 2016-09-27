@@ -13,10 +13,13 @@
                         <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
                       <!-- /.section-description -->
 
+                            <select>
                             <% cycle_tracks = CycleTrack.all  
                             cycle_tracks.each do |ct| %>
-                                <p><%= ct.name %></p>
+                              <option value="<%= ct.id %>"><%= ct.name.to_s + " - " + ct.typology.to_s %></option>
                             <% end %>
+                            </select>
+                            
 
                     </div><!-- /.section-head -->
                          
@@ -47,8 +50,8 @@
                 });
 
                 <% cycle_tracks.each do |ct| %>
-                var <%= "a"+ct.id.to_s %> = new google.maps.Marker({
-                    position: {lat: <%= ct.long %>, lng: <%= ct.lat %>},
+                var <%= "chris"+ct.id.to_s %> = new google.maps.Marker({
+                    position: {lat: <%= ct.lat %>, lng: <%= ct.long %>},
                     map: map
                 });
                 <% end %>
