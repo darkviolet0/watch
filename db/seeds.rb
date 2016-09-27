@@ -22,7 +22,8 @@ csv.each do |row|
   cd.name = row['NOM']
   cd.side = row['SITUATION']
   cd.geometry = row['GEOMETRIE']
-  cd.point = "POINT(" + row['X_LONG'].to_s + "," + row['Y_LAT'].to_s + ")"
+  cd.long = row['X_LONG']
+  cd.lat = row['Y_LAT']
   cd.save
   puts "#{cd.name} saved"
 end

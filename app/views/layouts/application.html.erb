@@ -10,7 +10,15 @@
     <meta name="author" content="watch.coop">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'modernizr' %>
+    <!-- Include jquery.min.js plugin -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Include jquery.min.js plugin -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <!-- Google Maps Script  -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I"></script>     
     
+
     <%= csrf_meta_tags %>
     <!-- favicon --> 
     <%= favicon_link_tag 'favicon.ico' %>
@@ -24,12 +32,7 @@
     <%= render 'layouts/messages' %>
         <%= yield %>
     <%= render 'layouts/footer' %>
-    <!-- Include jquery.min.js plugin -->
-    <script src="/js/jquery-2.1.0.min.js"></script>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  
-    <!-- Include jquery.min.js plugin -->
-    <script src="/js/jquery-2.1.0.min.js"></script>
+
     
     <!-- Include email-validation.js Email Validator -->
     <script src="/js/email-validation.js"></script> 
