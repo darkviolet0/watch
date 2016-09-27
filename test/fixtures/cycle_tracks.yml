@@ -5,8 +5,8 @@ one:
   typology: MyString
   side: MyString
   geometry: 
-  lat: 1.5
-  long: 1.5
+  lat: 
+  long: 
   wood: false
   district: 1
 
@@ -15,7 +15,7 @@ two:
   typology: MyString
   side: MyString
   geometry: 
-  lat: 1.5
-  long: 1.5
+  lat: 
+  long: 
   wood: false
   district: 1

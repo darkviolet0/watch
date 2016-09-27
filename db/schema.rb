@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927074658) do
+ActiveRecord::Schema.define(version: 20160927120330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20160927074658) do
     t.string   "typology"
     t.string   "side"
     t.geometry "geometry",   limit: {:srid=>0, :type=>"line_string"}
-    t.float    "lat"
-    t.float    "long"
+    t.decimal  "lat"
+    t.decimal  "long"
     t.boolean  "wood"
     t.integer  "district"
     t.datetime "created_at",                                          null: false

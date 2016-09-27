@@ -22,10 +22,10 @@ csv.each do |row|
   cd.name = row['NOM']
   cd.side = row['SITUATION']
   cd.geometry = row['GEOMETRIE']
-  cd.long = row['X_LONG']
-  cd.lat = row['Y_LAT']
+  cd.long = row['X_LONG'].gsub(/[.,]/, '.' => '', ',' => '.')
+  cd.lat = row['Y_LAT'].gsub(/[.,]/, '.' => '', ',' => '.')
   cd.save
-  puts "#{cd.name} saved"
+  puts "#{cd.name}  #{cd.long} #{row['X_LONG']} saved"
 end
 
 puts "There are now #{CycleTrack.count} rows in the cycle_data table"

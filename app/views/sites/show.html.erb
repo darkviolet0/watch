@@ -1,31 +1,34 @@
 <div class="container blog-page-container">
       <div class="row">
 
-<!-- About Section -->
-<section id="about">
-      <div class="about-section"> 
-      <div class="white-bg angular" style="padding-top: 100px; padding-bottom: 0px;">
-      
-         <div class="container">
-            <div class="section-head">
-              <h2 class="section-title"><%= @site.location %></h2>
-              <p class="section-description"><%= @site.description %></p>
-                <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
-              <!-- /.section-description -->
-            </div><!-- /.section-head -->
-                 
-            </div><!-- /.container -->
-          </div><!-- /.whitebg -->  
-        </div><!-- /.about-section -->
-</section><!-- /#about-->
-    <!-- About Section End -->
+        <!-- About Section -->
+        <section id="about">
+              <div class="about-section"> 
+              <div class="white-bg angular" style="padding-top: 100px; padding-bottom: 0px;">
+              
+                 <div class="container">
+                    <div class="section-head">
+                      <h2 class="section-title"><%= @site.location %></h2>
+                      <p class="section-description"><%= @site.description %></p>
+                        <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
+                      <!-- /.section-description -->
 
+                            <% cycle_tracks = CycleTrack.all  
+                            cycle_tracks.each do |ct| %>
+                                <p><%= ct.name %></p>
+                            <% end %>
 
-      
-
-
+                    </div><!-- /.section-head -->
+                         
+                    </div><!-- /.container -->
+                  </div><!-- /.whitebg -->  
+                </div><!-- /.about-section -->
+        </section><!-- /#about-->
+            <!-- About Section End -->
   </div>
 </div>
+
+
      
     <script type="text/javascript">
           /*----------- Google Map -  ----------------*/
@@ -42,6 +45,13 @@
                     scrollwheel: false,
                     streetViewControl: true
                 });
+
+                <% cycle_tracks.each do |ct| %>
+                var <%= "a"+ct.id.to_s %> = new google.maps.Marker({
+                    position: {lat: <%= ct.long %>, lng: <%= ct.lat %>},
+                    map: map
+                });
+                <% end %>
               }
                 
                 function isMobile() { 
