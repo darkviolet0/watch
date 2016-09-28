@@ -26,6 +26,7 @@ gem 'high_voltage'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'font-awesome-rails'
+gem 'gretel'
 
 group :development do
   gem 'web-console'

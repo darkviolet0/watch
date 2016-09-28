@@ -1,35 +1,134 @@
+
 <div class="container blog-page-container">
       <div class="row">
+        <div id="blog-section" class="col-md-8 blog-section">
 
-        <!-- About Section -->
-        <section id="about">
-              <div class="about-section"> 
-              <div class="white-bg angular" style="padding-top: 100px; padding-bottom: 0px;">
-              
-                 <div class="container">
-                    <div class="section-head">
+          <!-- Post Box-->
+          <div class="row post-box">
+              <article class="post-content">
                       <h2 class="section-title"><%= @site.location %></h2>
                       <p class="section-description"><%= @site.description %></p>
-                        <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
-                      <!-- /.section-description -->
+                      <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
+                <h2 class="post-title">
+                  <%= @track.name %>
+                </h2>
+                <p class="post-meta">
+                  Nature : <%= @track.typology %> |
+                  Côté : <%= @track.side %> |
+                  Nombre de commentaires : 
+                </p>
+              </article> <!-- /.post-content -->
+          </div><!-- /#post-box --><!-- /.row -->
+          <!-- Post Box End -->
+          <div class="comment-section" id="comments">
+            <h3 class="title">
+              203 Comments
+            </h3>
 
-                            <select>
-                            <% cycle_tracks = CycleTrack.all  
-                            cycle_tracks.each do |ct| %>
-                              <option value="<%= ct.id %>"><%= ct.name.to_s + " - " + ct.typology.to_s %></option>
-                            <% end %>
-                            </select>
-                            
+            <div id="submited-comment">
+              <ol class="commentlist">
+                <li  class="comment">
+                  <article>
+                    <div class="author-image col-md-3">
+                      <img class="img-circle" src="/images/comment/testimonial-1.jpg" alt="Author Image">
+                    </div><!-- /.author-hex -->
 
-                    </div><!-- /.section-head -->
-                         
-                    </div><!-- /.container -->
-                  </div><!-- /.whitebg -->  
-                </div><!-- /.about-section -->
-        </section><!-- /#about-->
-            <!-- About Section End -->
-  </div>
-</div>
+                    <div class="comment-content col-md-9">
+                      <p class="comment-meta">
+                        <a class="comment-author" href="#">John Doe</a> <br> 
+                        On 12 May, 2014
+                      </p><!-- /.comment-meta -->
+                      <p>Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat. Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat. Lorem idivsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <p><a class="btn custom-btn angle-effect" href="#">Reply</a></p>
+                    </div><!-- /.comment-content -->                    
+                  </article>
+                  <ul class="children">
+                    <li class="comment">
+                      <article>
+                        <div class="author-image col-md-3">
+                          <img class="img-circle" src="/images/comment/testimonial-1.jpg" alt="Author Image">
+                        </div><!-- /.author-hex -->
+
+                        <div class="comment-content col-md-9">
+                          <p class="comment-meta">
+                            <a class="comment-author" href="#">John Doe</a> <br> 
+                            On 12 May, 2014
+                          </p><!-- /.comment-meta -->
+                          <p>Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat.</p>
+                          <p><a class="btn custom-btn angle-effect" href="#">Reply</a></p>
+                        </div><!-- /.comment-content -->                    
+                      </article>
+                      
+                    </li> <!-- /.comment -->
+                  </ul> <!-- /.children -->
+                </li> <!-- /.comment -->
+               </ol> <!-- /.commentlist -->
+            </div> <!-- /#submited-commnet -->
+
+            
+
+            <!-- Leave Comment -->
+            <div id="leave-comment" class="clearfix">
+              
+              
+              <h3 class="title">Leave a Comment</h3>
+
+              <div id="respond">
+                <form action="#" class="comment-form" method="post" id="commentform">
+                  <input class="form-control" id="author" name="author" type="text" placeholder="Name" value="" required>
+                  <input class="form-control" id="email" name="email" type="email" placeholder="Email" value="" required>
+                  <input class="form-control" id="url" name="url" type="url" placeholder="Website" value="">
+                  <textarea class="form-control" id="comment" name="comment" placeholder="Message" rows="8" required></textarea>
+                  <input name="submit" type="submit" id="submit" value="Submit Comment" class="btn">
+                </form><!-- /#commentform -->
+              </div><!-- /#respond -->
+            </div><!-- /#leave-comment -->
+            <!-- Leave Comment End -->
+
+          </div><!-- /#comments -->
+        </div><!-- /#blog-section --> 
+
+<!-- SIDEBAR -------------------------------------------->
+
+        <aside id="blog-sidebar" class="col-md-4 blog-sidebar">
+            <h3 class="title">
+             Laissez votre avis !
+            </h3>
+            <p class="widget-content">
+              Vous pouvez sélectionner une portion dans la liste déroulante ou effectuer une recherche, pour chaque portion vous pouvez noter et commenter votre expérience personnelle.
+            </p><!-- /.widget-content -->
+          <!-- cycle tracks elements list -->
+                <select class="btn custom-btn" style="width: 100%">
+                  <% cycle_tracks = CycleTrack.all  
+                  cycle_tracks.each do |ct| %>
+                    <option value="<%= ct.id %>"><%= ct.name.to_s + " - " + ct.typology.to_s %></option>
+                  <% end %>
+                </select>
+          <!-- /.cycle tracks elements list --> 
+          <p class="widget-content">
+              ou
+            </p><!-- /.widget-content -->
+          <form class="sidebar-search  clearfix" action="#" method="get">
+            <input class="form-control" type="text" name="s" id="s" placeholder="Trouver une portion" required>
+            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+
+          
+
+         
+
+
+         
+
+
+        </aside><!-- /#blog-sidebar -->   
+      </div> <!-- /.row -->
+    </div><!-- /.container -->
+
+
+
+
+
 
 
      
@@ -38,7 +137,7 @@
             function initMap() {
                 var mapDiv = document.getElementById('googleMaps');
                 var map = new google.maps.Map(mapDiv, {
-                    center: {lat: <%= @site.longitude %>, lng: <%= @site.latitude %>},
+                    center: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
                     zoom: 15,
                     mapTypeControl: true,
                     mapTypeControlOptions: {
@@ -49,12 +148,11 @@
                     streetViewControl: true
                 });
 
-                <% cycle_tracks.each do |ct| %>
-                var <%= "chris"+ct.id.to_s %> = new google.maps.Marker({
-                    position: {lat: <%= ct.lat %>, lng: <%= ct.long %>},
+                var <%= "chris"+@track.id.to_s %> = new google.maps.Marker({
+                    position: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
                     map: map
                 });
-                <% end %>
+                
               }
                 
                 function isMobile() { 
