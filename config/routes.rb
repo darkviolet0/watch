@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cycle_track_comments
   root to: 'visitors#new'
   
   resources :sites, :themes

@@ -1,0 +1,14 @@
+<%= simple_form_for(@cycle_track_comment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :text %>
+    <%= f.input :rating %>
+    <%= f.association :User %>
+    <%= f.association :CycleTrack %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

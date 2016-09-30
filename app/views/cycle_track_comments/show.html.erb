@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @cycle_track_comment.text %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @cycle_track_comment.rating %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cycle_track_comment.User %>
+</p>
+
+<p>
+  <strong>Cycletrack:</strong>
+  <%= @cycle_track_comment.CycleTrack %>
+</p>
+
+<%= link_to 'Edit', edit_cycle_track_comment_path(@cycle_track_comment) %> |
+<%= link_to 'Back', cycle_track_comments_path %>

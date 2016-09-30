@@ -1,6 +1,6 @@
-class CreateTrackComments < ActiveRecord::Migration[5.0]
+class CreateCycleTrackComments < ActiveRecord::Migration[5.0]
   def change
-    create_table :track_comments do |t|
+    create_table :cycle_track_comments do |t|
       t.text :text
       t.integer :rating
       t.references :users, foreign_key: true

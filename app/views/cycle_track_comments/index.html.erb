@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cycle Track Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Rating</th>
+      <th>User</th>
+      <th>Cycletrack</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cycle_track_comments.each do |cycle_track_comment| %>
+      <tr>
+        <td><%= cycle_track_comment.text %></td>
+        <td><%= cycle_track_comment.rating %></td>
+        <td><%= cycle_track_comment.User %></td>
+        <td><%= cycle_track_comment.CycleTrack %></td>
+        <td><%= link_to 'Show', cycle_track_comment %></td>
+        <td><%= link_to 'Edit', edit_cycle_track_comment_path(cycle_track_comment) %></td>
+        <td><%= link_to 'Destroy', cycle_track_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cycle Track Comment', new_cycle_track_comment_path %>

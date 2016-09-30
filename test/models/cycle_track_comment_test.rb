@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TrackCommentTest < ActiveSupport::TestCase
+class CycleTrackCommentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

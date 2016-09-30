@@ -15,55 +15,37 @@
                 <p class="post-meta">
                   Nature : <%= @track.typology %> |
                   Côté : <%= @track.side %> |
-                  Nombre de commentaires : 
+                  Nombre de commentaires : <%= @track.CycleTrackComment.length %>
                 </p>
               </article> <!-- /.post-content -->
           </div><!-- /#post-box --><!-- /.row -->
           <!-- Post Box End -->
           <div class="comment-section" id="comments">
             <h3 class="title">
-              203 Comments
+              <%= @track.CycleTrackComment.length %> commentaire(s)
             </h3>
+                  <% @track.CycleTrackComment.each do |comment| %>
+                        <div id="submited-comment">
+                          <ol class="commentlist">
+                            <li  class="comment">
+                              <article>
+                                <div class="author-image col-md-3">
+                                  <img class="img-circle" src="<%= current_user.image %>" alt="Author Image">
+                                </div><!-- /.author-hex -->
 
-            <div id="submited-comment">
-              <ol class="commentlist">
-                <li  class="comment">
-                  <article>
-                    <div class="author-image col-md-3">
-                      <img class="img-circle" src="/images/comment/testimonial-1.jpg" alt="Author Image">
-                    </div><!-- /.author-hex -->
-
-                    <div class="comment-content col-md-9">
-                      <p class="comment-meta">
-                        <a class="comment-author" href="#">John Doe</a> <br> 
-                        On 12 May, 2014
-                      </p><!-- /.comment-meta -->
-                      <p>Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat. Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat. Lorem idivsum dolor sit amet, consectetur adipisicing elit.</p>
-                      <p><a class="btn custom-btn angle-effect" href="#">Reply</a></p>
-                    </div><!-- /.comment-content -->                    
-                  </article>
-                  <ul class="children">
-                    <li class="comment">
-                      <article>
-                        <div class="author-image col-md-3">
-                          <img class="img-circle" src="/images/comment/testimonial-1.jpg" alt="Author Image">
-                        </div><!-- /.author-hex -->
-
-                        <div class="comment-content col-md-9">
-                          <p class="comment-meta">
-                            <a class="comment-author" href="#">John Doe</a> <br> 
-                            On 12 May, 2014
-                          </p><!-- /.comment-meta -->
-                          <p>Lorem idivsum dolor sit amet, consectetur adipisicing elit. Sapiente, repellendus, omnis, ullam fugit repudiandae reiciendis velit ad consequuntur porro laudantium delectus nulla nemo assumenda sunt culpa voluptatum deleniti dolore fugiat.</p>
-                          <p><a class="btn custom-btn angle-effect" href="#">Reply</a></p>
-                        </div><!-- /.comment-content -->                    
-                      </article>
-                      
-                    </li> <!-- /.comment -->
-                  </ul> <!-- /.children -->
-                </li> <!-- /.comment -->
-               </ol> <!-- /.commentlist -->
-            </div> <!-- /#submited-commnet -->
+                                <div class="comment-content col-md-9">
+                                  <p class="comment-meta">
+                                    <%= current_user.name %> <br> 
+                                    Le <%= comment.created_at %>
+                                  </p><!-- /.comment-meta -->
+                                  <p><%= comment.text %></p>
+                                  <p><a class="btn custom-btn angle-effect" href="#">Répondre</a></p>
+                                </div><!-- /.comment-content -->                    
+                              </article>
+                            </li> <!-- /.comment -->
+                           </ol> <!-- /.commentlist -->
+                        </div> <!-- /#submited-commnet -->
+                  <%end %>
 
             
 
@@ -71,15 +53,16 @@
             <div id="leave-comment" class="clearfix">
               
               
-              <h3 class="title">Leave a Comment</h3>
+              <h3 class="title">Laisser un commentaire</h3>
 
               <div id="respond">
-                <form action="#" class="comment-form" method="post" id="commentform">
-                  <input class="form-control" id="author" name="author" type="text" placeholder="Name" value="" required>
-                  <input class="form-control" id="email" name="email" type="email" placeholder="Email" value="" required>
-                  <input class="form-control" id="url" name="url" type="url" placeholder="Website" value="">
+                <form action="/cycle_track_comments" class="comment-form" method="post" id="commentform">
+                  <%= current_user.name %> | <%= current_user.email %>  
+                  <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+                  <%= tag(:input, :type => "hidden", :name => "cycle_track_id", :value => @track.id) %> 
+                  <%= tag(:input, :type => "hidden", :name => "id_site", :value => @site.id) %> 
                   <textarea class="form-control" id="comment" name="comment" placeholder="Message" rows="8" required></textarea>
-                  <input name="submit" type="submit" id="submit" value="Submit Comment" class="btn">
+                  <input name="submit" type="submit" id="submit" value="Poster" class="btn">
                 </form><!-- /#commentform -->
               </div><!-- /#respond -->
             </div><!-- /#leave-comment -->
