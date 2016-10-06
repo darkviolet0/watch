@@ -25,12 +25,16 @@
   </head>
   <body>
   
-  <% unless controller_name == "pages" %>
-    <%= render 'layouts/navigation' %>
+  <% if controller_name == "visitors" %>
+    <%= render 'layouts/navigation_home' %>
+  <% else %> 
+    <% unless controller_name == "pages"%>
+    <%= render  'layouts/navigation' %>
   <% end %>
+  <% end %>
+
     
     <%= render 'layouts/messages' %>
-    <%= breadcrumbs pretext: "Vous êtes ici: ", separator: " &rsaquo; ", :display_single_fragment => true %>
         <%= yield %>
     <%= render 'layouts/footer' %>
 
@@ -50,8 +54,7 @@
     <script src="/js/functions.js"></script>
 
     
-
-    <script type="text/javascript">
+<script type="text/javascript">
 
       /*---------------------- Current Menu Item -------------------------*/
       jQuery(document).ready(function($) {
@@ -68,5 +71,6 @@
         });         
       });
     </script>
+    
   </body>
 </html>
