@@ -17,6 +17,31 @@ before_action :set_theme, only: [:show]
     end
   end
 
+  def subscribe
+      subject = '<watch> Contact sur le site'; 
+      to = "fabrice@watch.coop";  
+
+      headers  = 'MIME-Version: 1.0' + "\r\n";
+      headers << "From: " + params[:email] + "\r\n"; 
+      headers << 'Content-type: text/html; charset=iso-8859-1' + "\r\n";
+
+      message = 'Name: ' + params[:name] + "<br>";
+      message << params[:message];
+
+      respond_to do |format|
+        format.js
+       end  
+      
+#      if (@mail($to, $ccr_subject, $ccr_message, $headers))
+#        puts 'sent'
+#      else
+#        puts 'failed'
+#      end
+
+  end
+
+
+
   private
 
   def secure_params

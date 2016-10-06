@@ -53,24 +53,9 @@
     <!-- Include functions.js -->
     <script src="/js/functions.js"></script>
 
-    
-<script type="text/javascript">
+<% if controller_name == "visitors" %>
+    <%= render 'layouts/current_menu_script' %>
+<% end %>
 
-      /*---------------------- Current Menu Item -------------------------*/
-      jQuery(document).ready(function($) {
-        "use strict";
-
-        $('#main-menu #headernavigation').onePageNav({
-          currentClass: 'active',
-          changeHash: false,
-          scrollSpeed: 750,
-          scrollThreshold: 0.5,
-          scrollOffset: 60,
-          filter: '',
-          easing: 'swing'
-        });         
-      });
-    </script>
-    
   </body>
 </html>

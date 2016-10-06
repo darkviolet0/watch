@@ -224,9 +224,6 @@
             </p>
           </div><!-- /.section-head -->
 
-
-
-
           <div class="row">
             <div class="news-container">
 
@@ -242,12 +239,12 @@
                         </span>
                       </div>
 
-                      <time datetime="2016-09-12"><%= l(theme.created_at, :format => '%d %B %Y') %></time>
+                      <time datetime="<%= l(theme.created_at, :format => '%d %B %Y') %>"><%= l(theme.created_at, :format => '%d %B %Y') %></time>
                       <span class="name">
-                        <a href="#">Fabrice P.</a>
+                        Fabrice P.
                       </span>
                       <span>
-                        <a href="#">24 Comments</a>
+                        <%= CycleTrackComment.all.length %> commentaires
                       </span>
                     </div><!-- /.post-meta -->
                     <div class="post-details">
@@ -309,7 +306,8 @@
                   Laissez nous un message
                 </h3>
 
-                <form class="contact-form" id="contact-form" action="email.php" method="post">
+                <form class="contact-form" id="contact-form" action="/message" method="post">
+                <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
                   <div id="name_error" class="error">
                   <%= image_tag("email/error.png", :alt => "Error!")%>
                     Veuillez saisir votre nom.
@@ -368,7 +366,7 @@ Nous souhaitons également associer des partenaires d'autres pays de la communau
                       +61 3146 8728, +61 0987 6543
                     </li>-->
                     <li class="fa-envelope">
-                      contact@watch.coop
+                      contact @ watch.coop
                     </li>
                   </ul><!-- /.contact-address --> 
                 </address>

@@ -8,7 +8,7 @@
               <article class="post-content">
                       <h2 class="section-title"><%= @site.location %></h2>
                       <p class="section-description"><%= @site.description %></p>
-                      <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
+                      
                 <h2 class="post-title" style="color: black;">
                   <%= @track.name %>
                 </h2>
@@ -19,7 +19,7 @@
                   <% end %>
                   
                   <% if @track.CycleTrackComment.length != 0 %>
-                    Note moyenne : 
+                   | Note moyenne : 
                    <% @track.CycleTrackComment.average(:rating).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
@@ -33,6 +33,7 @@
                         end%>
                   <% end %>
                 </p>
+                <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
                 <% if @track.CycleTrackComment.length != 0 %>
               <%= @track.CycleTrackComment.length %> commentaire(s)
             <% else %>
@@ -51,13 +52,14 @@
                             <li  class="comment">
                             <section id="comment-<%= comment.id %>">
                               <article>
+                              <% comment_user = User.find(comment.users_id) %>
                                 <div class="author-image col-md-3">
-                                  <img class="img-circle" src="<%= current_user.image %>?type=large" alt="Author Image"/>
+                                  <img class="img-circle" src="<%= comment_user.image %>?type=large" alt="Author Image"/>
                                 </div><!-- /.author-hex -->
 
                                 <div class="comment-content col-md-9">
                                   <p class="comment-meta">
-                                    <%= current_user.name %> <br> 
+                                    <%= comment_user.name %> <br> 
                                     Le <%= l(comment.created_at, :format => '%d %B %Y') %>
                                   </p><!-- /.comment-meta -->
                                   <div id="star container">
@@ -76,7 +78,7 @@
                                     %>
                                     </div> <!-- ./ star container -->
                                   <p><%= comment.text %></p>
-                                  <p><a class="btn custom-btn angle-effect" href="#">Répondre</a></p>
+                                  <% if current_user.present? %> <p><a class="btn custom-btn angle-effect" href="#">Répondre</a></p> <% end %>
                                 </div><!-- /.comment-content -->
                                 </section>                    
                               </article>
@@ -86,12 +88,16 @@
                   <%end %>
 
             <!-- Leave Comment -->
-           
+            <% if current_user.present? %>
             <h3 class="title">Laisser un commentaire</h3>
 
               <div id="respond">
                 <form action="/cycle_track_comments" class="comment-form" method="post" id="commentform">
-                  <%= current_user.name %> | <%= current_user.email %>  
+                  <% if current_user.present? %>
+                    <%= current_user.name %> | <%= current_user.email %>  
+                  <% else %>
+                    Anonyme 
+                  <% end %>
                   <br>Notez le parcours : <br>
                   <span class="rating">
                           <input type="radio" class="rating-input" id="rating-input-1-5" name="rating" value="5" />
@@ -112,6 +118,10 @@
                   <input name="submit" type="submit" id="submit" value="Poster" class="btn">
                 </form><!-- /#commentform -->
               </div><!-- /#respond -->
+              <% else %>
+              
+
+              <% end %>
          
             <!-- Leave Comment End -->
           </div><!-- /#comments -->
