@@ -21,7 +21,6 @@ end
 
 def search
     if params[:search].present?
-       Rails.logger.debug("IF: #{params[:search].inspect}")
        t = CycleTrack.arel_table
        @searchresults = CycleTrack.where(t[:name].matches("%#{params[:search]}%"))
        respond_to do |format|

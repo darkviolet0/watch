@@ -17,6 +17,21 @@
                   <% if @track.side %>
                     Côté : <%= @track.side %> 
                   <% end %>
+                  
+                  <% if @track.CycleTrackComment.length != 0 %>
+                    Note moyenne : 
+                   <% @track.CycleTrackComment.average(:rating).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating).round %>
+                    <% count = count2 = 1 %>
+                        <% while (count <=  avg_rating) %>
+                          <%= image_tag("star-on.png", style: "width: 16px !important") %>
+                          <% count += 1 %>
+                        <% end %>
+                        <%while (count2 <= (5 -  avg_rating)) %>
+                          <%= image_tag("star-off.png", style: "width: 16px !important") %>
+                          <% 
+                          count2 += 1
+                        end%>
+                  <% end %>
                 </p>
                 <% if @track.CycleTrackComment.length != 0 %>
               <%= @track.CycleTrackComment.length %> commentaire(s)
@@ -37,14 +52,29 @@
                             <section id="comment-<%= comment.id %>">
                               <article>
                                 <div class="author-image col-md-3">
-                                  <img class="img-circle" src="<%= current_user.image %>" alt="Author Image">
+                                  <img class="img-circle" src="<%= current_user.image %>?type=large" alt="Author Image"/>
                                 </div><!-- /.author-hex -->
 
                                 <div class="comment-content col-md-9">
                                   <p class="comment-meta">
                                     <%= current_user.name %> <br> 
-                                    Le <%= comment.created_at %>
+                                    Le <%= l(comment.created_at, :format => '%d %B %Y') %>
                                   </p><!-- /.comment-meta -->
+                                  <div id="star container">
+                                  Note donnée à la portion: 
+                                  <% count = count2 = 1 %>
+                                    <% comment.rating.nil? ? rating = 0 : rating = comment.rating
+                                    while (count <= rating) %>
+                                      <%= image_tag("star-on.png", style: "width: 16px !important") %>
+                                      <% count += 1 %>
+                                    <% end %>
+                                    <%while (count2 <= (5 - rating)) %>
+                                      <%= image_tag("star-off.png", style: "width: 16px !important") %>
+                                      <% 
+                                      count2 += 1
+                                    end
+                                    %>
+                                    </div> <!-- ./ star container -->
                                   <p><%= comment.text %></p>
                                   <p><a class="btn custom-btn angle-effect" href="#">Répondre</a></p>
                                 </div><!-- /.comment-content -->
@@ -62,6 +92,19 @@
               <div id="respond">
                 <form action="/cycle_track_comments" class="comment-form" method="post" id="commentform">
                   <%= current_user.name %> | <%= current_user.email %>  
+                  <br>Notez le parcours : <br>
+                  <span class="rating">
+                          <input type="radio" class="rating-input" id="rating-input-1-5" name="rating" value="5" />
+                          <label for="rating-input-1-5" class="rating-star"></label>
+                          <input type="radio" class="rating-input" id="rating-input-1-4" name="rating" value="4" />
+                          <label for="rating-input-1-4" class="rating-star"></label>
+                          <input type="radio" class="rating-input" id="rating-input-1-3" name="rating" value="3" />
+                          <label for="rating-input-1-3" class="rating-star"></label>
+                          <input type="radio" class="rating-input" id="rating-input-1-2" name="rating" value="2" />
+                          <label for="rating-input-1-2" class="rating-star"></label>
+                          <input type="radio" class="rating-input"id="rating-input-1-1" name="rating" value="1" />
+                          <label for="rating-input-1-1" class="rating-star"></label>
+                  </span>
                   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
                   <%= tag(:input, :type => "hidden", :name => "track_id", :value => @track.id) %> 
                   <%= tag(:input, :type => "hidden", :name => "id_site", :value => @site.id) %> 
@@ -94,11 +137,6 @@
           <p class="widget-content">
               ou
             </p><!-- /.widget-content -->
-           <!--
-          <form id="search-form" class="sidebar-search  clearfix" action="/searchct" method="get" data-remote="true">
-            <input class="form-control" type="text" name="search" id="s" placeholder="Trouver une portion" required>
-            <button class="btn"><i class="fa fa-search"></i></button>
-          </form>-->
           
         <%= form_tag("/searchct", id: "search-form", method: "get", remote: true, class: "sidebar-search  clearfix") do %>
           <input class="form-control" type="text" name="search" id="search" placeholder="Trouver une portion" required>
