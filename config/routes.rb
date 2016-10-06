@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+
+  match '/searchct', to: 'sites#search', via: [:get]
   resources :cycle_track_comments
   root to: 'visitors#new'
   
-  resources :sites, :themes
+  resources :themes
+  resources :sites do
+    collection do
+      get 'searchct'
+    end
+  end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   namespace :admin do

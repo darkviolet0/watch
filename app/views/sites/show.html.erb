@@ -9,25 +9,32 @@
                       <h2 class="section-title"><%= @site.location %></h2>
                       <p class="section-description"><%= @site.description %></p>
                       <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
-                <h2 class="post-title">
+                <h2 class="post-title" style="color: black;">
                   <%= @track.name %>
                 </h2>
                 <p class="post-meta">
                   Nature : <%= @track.typology %> |
-                  Côté : <%= @track.side %> |
-                  Nombre de commentaires : <%= @track.CycleTrackComment.length %>
+                  <% if @track.side %>
+                    Côté : <%= @track.side %> 
+                  <% end %>
                 </p>
+                <% if @track.CycleTrackComment.length != 0 %>
+              <%= @track.CycleTrackComment.length %> commentaire(s)
+            <% else %>
+              Pas de commentaires.
+            <% end %>
               </article> <!-- /.post-content -->
           </div><!-- /#post-box --><!-- /.row -->
           <!-- Post Box End -->
+
           <div class="comment-section" id="comments">
-            <h3 class="title">
-              <%= @track.CycleTrackComment.length %> commentaire(s)
-            </h3>
+                  
+
                   <% @track.CycleTrackComment.each do |comment| %>
                         <div id="submited-comment">
                           <ol class="commentlist">
                             <li  class="comment">
+                            <section id="comment-<%= comment.id %>">
                               <article>
                                 <div class="author-image col-md-3">
                                   <img class="img-circle" src="<%= current_user.image %>" alt="Author Image">
@@ -40,34 +47,30 @@
                                   </p><!-- /.comment-meta -->
                                   <p><%= comment.text %></p>
                                   <p><a class="btn custom-btn angle-effect" href="#">Répondre</a></p>
-                                </div><!-- /.comment-content -->                    
+                                </div><!-- /.comment-content -->
+                                </section>                    
                               </article>
                             </li> <!-- /.comment -->
                            </ol> <!-- /.commentlist -->
                         </div> <!-- /#submited-commnet -->
                   <%end %>
 
-            
-
             <!-- Leave Comment -->
-            <div id="leave-comment" class="clearfix">
-              
-              
-              <h3 class="title">Laisser un commentaire</h3>
+           
+            <h3 class="title">Laisser un commentaire</h3>
 
               <div id="respond">
                 <form action="/cycle_track_comments" class="comment-form" method="post" id="commentform">
                   <%= current_user.name %> | <%= current_user.email %>  
                   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
-                  <%= tag(:input, :type => "hidden", :name => "cycle_track_id", :value => @track.id) %> 
+                  <%= tag(:input, :type => "hidden", :name => "track_id", :value => @track.id) %> 
                   <%= tag(:input, :type => "hidden", :name => "id_site", :value => @site.id) %> 
                   <textarea class="form-control" id="comment" name="comment" placeholder="Message" rows="8" required></textarea>
                   <input name="submit" type="submit" id="submit" value="Poster" class="btn">
                 </form><!-- /#commentform -->
               </div><!-- /#respond -->
-            </div><!-- /#leave-comment -->
+         
             <!-- Leave Comment End -->
-
           </div><!-- /#comments -->
         </div><!-- /#blog-section --> 
 
@@ -81,7 +84,7 @@
               Vous pouvez sélectionner une portion dans la liste déroulante ou effectuer une recherche, pour chaque portion vous pouvez noter et commenter votre expérience personnelle.
             </p><!-- /.widget-content -->
           <!-- cycle tracks elements list -->
-                <select class="btn custom-btn" style="width: 100%">
+                <select id= "track_select" class="form-control inputstl" style="width: 100%" onchange="">
                   <% cycle_tracks = CycleTrack.all  
                   cycle_tracks.each do |ct| %>
                     <option value="<%= ct.id %>"><%= ct.name.to_s + " - " + ct.typology.to_s %></option>
@@ -91,63 +94,75 @@
           <p class="widget-content">
               ou
             </p><!-- /.widget-content -->
-          <form class="sidebar-search  clearfix" action="#" method="get">
-            <input class="form-control" type="text" name="s" id="s" placeholder="Trouver une portion" required>
-            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-          </form>
-
+           <!--
+          <form id="search-form" class="sidebar-search  clearfix" action="/searchct" method="get" data-remote="true">
+            <input class="form-control" type="text" name="search" id="s" placeholder="Trouver une portion" required>
+            <button class="btn"><i class="fa fa-search"></i></button>
+          </form>-->
           
+        <%= form_tag("/searchct", id: "search-form", method: "get", remote: true, class: "sidebar-search  clearfix") do %>
+          <input class="form-control" type="text" name="search" id="search" placeholder="Trouver une portion" required>
+          <button class="btn"><i class="fa fa-search"></i></button>
+        <% end %>
 
-         
-
-
-         
-
+         <div id="searchdisplay" name="searchdisplay"></div>
 
         </aside><!-- /#blog-sidebar -->   
       </div> <!-- /.row -->
     </div><!-- /.container -->
 
 
+<script>
+$('#track_select').change(function() {
+  window.location = "?track_id=" + $(this).val();
+});
+
+
+// Search form.
+  $('#search-form input').keyup(function () {
+      if (document.getElementById("search").value.length < 4) return;
+      $.get($("#search-form").attr("action"), $(this).serialize(), null, 'script');
+      return false;
+  });
 
 
 
-
-
+  
+</script>
      
-    <script type="text/javascript">
-          /*----------- Google Map -  ----------------*/
-            function initMap() {
-                var mapDiv = document.getElementById('googleMaps');
-                var map = new google.maps.Map(mapDiv, {
-                    center: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
-                    zoom: 15,
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {
-                      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-                    },
-                    navigationControl: true,
-                    scrollwheel: false,
-                    streetViewControl: true
-                });
+<script type="text/javascript">
+      /*----------- Google Map -  ----------------*/
+        function initMap() {
+            var mapDiv = document.getElementById('googleMaps');
+            var map = new google.maps.Map(mapDiv, {
+                center: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
+                zoom: 15,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                  style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                },
+                navigationControl: true,
+                scrollwheel: false,
+                streetViewControl: true
+            });
 
-                var <%= "chris"+@track.id.to_s %> = new google.maps.Marker({
-                    position: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
-                    map: map
-                });
-                
-              }
-                
-                function isMobile() { 
-                  return ('ontouchstart' in document.documentElement);
-                }
+            var <%= "chris"+@track.id.to_s %> = new google.maps.Marker({
+                position: {lat: <%= @track.lat %>, lng: <%= @track.long %>},
+                map: map
+            });
             
+          }
+            
+            function isMobile() { 
+              return ('ontouchstart' in document.documentElement);
+            }
+        
 
-                  if (isMobile()) {
-                    options.draggable = false;
-                  }
+              if (isMobile()) {
+                options.draggable = false;
+              }
 
 
-                initMap();
-       
-    </script>
+            initMap();
+   
+</script>

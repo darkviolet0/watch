@@ -1,0 +1,10 @@
+<%if sr%>
+						<div class="title">
+							<%= sr.length %> résultat(s)
+						</div>
+						<ul class="widget-content">
+							<% sr.each do |res| %>
+								<li><a href="?track_id=<%= res.id %>" ><%= res.name %></a></li>
+							<% end %>	
+						</ul><!-- /.widget-content -->
+<% end %>

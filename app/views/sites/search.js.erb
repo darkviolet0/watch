@@ -1,0 +1,2 @@
+$("#searchdisplay").html("<%= escape_javascript(render partial: 'search', locals: { sr: @searchresults }) %>");
+$("#searchdisplay").slideDown(350);

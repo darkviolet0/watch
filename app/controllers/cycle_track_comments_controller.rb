@@ -5,17 +5,10 @@ def create
   @comment.text = params[:comment]
   @comment.users_id = current_user.id 
   @comment.rating = 5
-  @comment.cycle_track_id = params[:cycle_track_id]
-  
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to Site.find(params[:id_site]), notice: 'Merci pour votre commentaire.' }
-        format.json { render :show, status: :created, location: @site }
-      else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
+  @comment.cycle_track_id = params[:track_id]
+  @comment.save
+  c_id = @comment.id
+  redirect_to :controller => 'sites', :action => 'show', :id => params[:id_site], :track_id => params[:track_id], anchor: "comment-" + c_id.to_s
 end
 
 
