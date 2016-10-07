@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160928151318) do
     t.integer  "cycle_track_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["cycle_tracks_id"], name: "index_cycle_track_comments_on_cycle_tracks_id", using: :btree
+    t.index ["cycle_track_id"], name: "index_cycle_track_comments_on_cycle_tracks_id", using: :btree
     t.index ["users_id"], name: "index_cycle_track_comments_on_users_id", using: :btree
   end
 
@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20160928151318) do
     t.string   "image"
   end
 
-  add_foreign_key "cycle_track_comments", "cycle_tracks", column: "cycle_tracks_id"
+  add_foreign_key "cycle_track_comments", "cycle_tracks", column: "cycle_track_id"
   add_foreign_key "cycle_track_comments", "users", column: "users_id"
   add_foreign_key "sites", "themes"
 end
