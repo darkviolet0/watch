@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928151318) do
+ActiveRecord::Schema.define(version: 20161010100534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,11 +49,11 @@ ActiveRecord::Schema.define(version: 20160928151318) do
 
   create_table "cycle_track_comments", force: :cascade do |t|
     t.text     "text"
-    t.integer  "rating"
+    t.integer  "rating_speed"
     t.integer  "users_id"
     t.integer  "cycle_track_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["cycle_track_id"], name: "index_cycle_track_comments_on_cycle_tracks_id", using: :btree
     t.index ["users_id"], name: "index_cycle_track_comments_on_users_id", using: :btree
   end
@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20160928151318) do
     t.string   "image"
   end
 
-  add_foreign_key "cycle_track_comments", "cycle_tracks", column: "cycle_track_id"
+  add_foreign_key "cycle_track_comments", "cycle_tracks"
   add_foreign_key "cycle_track_comments", "users", column: "users_id"
   add_foreign_key "sites", "themes"
 end

@@ -19,8 +19,8 @@
                   <% end %>
                   
                   <% if @track.CycleTrackComment.length != 0 %>
-                   | Note moyenne : 
-                   <% @track.CycleTrackComment.average(:rating).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating).round %>
+                   | Notes moyennes : 
+                   <% @track.CycleTrackComment.average(:rating_speed).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_speed).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
                           <%= image_tag("star-on.png", style: "width: 16px !important") %>
@@ -63,9 +63,9 @@
                                     Le <%= l(comment.created_at, :format => '%d %B %Y') %>
                                   </p><!-- /.comment-meta -->
                                   <div id="star container">
-                                  Note donnée à la portion: 
+                                  Notes données à la portion: 
                                   <% count = count2 = 1 %>
-                                    <% comment.rating.nil? ? rating = 0 : rating = comment.rating
+                                    <% comment.rating_speed.nil? ? rating = 0 : rating = comment.rating_speed
                                     while (count <= rating) %>
                                       <%= image_tag("star-on.png", style: "width: 16px !important") %>
                                       <% count += 1 %>
