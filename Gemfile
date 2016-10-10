@@ -27,6 +27,7 @@ gem 'sendgrid'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'gretel'
+gem 'active_skin'
 
 
 group :development do

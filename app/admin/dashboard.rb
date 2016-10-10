@@ -10,6 +10,19 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+columns do
+       column do
+         panel "Recent comments" do
+           ul do
+             CycleTrackComment.first(5).map do |post|
+               li link_to(post.text, admin_cycle_track_comment_path(post))
+             end
+           end
+         end
+end
+end
+
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

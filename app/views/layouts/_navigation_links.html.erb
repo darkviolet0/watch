@@ -1,15 +1,15 @@
 <%# add navigation links to this file %>
 <!-- Main navigation -->
-						<ul id="headernavigation" class="nav navbar-nav pull-right">
-							<li>
+						<div class="nav navbar-nav pull-right">
+							<p>
 							<% if current_user %>
     									<strong style="font-size: 12px"><%= current_user.name.split[0] %></strong>
     									<a href="/signout"><%= image_tag current_user.image, :alt => "profile pic", :style => "width:24px;height:24px;" %></a>
     									<% else %>
     									<a href="/login" class="donate" style="font-size: 14px">Connexion</a>
     						<% end %>
-    						</li>
-						</ul> 
+    						</p>
+						</div> 
 						
 						<!-- /.nav .navbar-nav -->
 
