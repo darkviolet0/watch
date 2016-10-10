@@ -4,7 +4,9 @@ def create
  	@comment = CycleTrackComment.new
   @comment.text = params[:comment]
   @comment.users_id = current_user.id 
-  @comment.rating = params[:rating_speed]
+  @comment.rating_speed = params[:rating_speed]
+  @comment.rating_pleasure = params[:rating_pleasure]
+  @comment.rating_security = params[:rating_security]
   @comment.cycle_track_id = params[:track_id]
   @comment.save
   c_id = @comment.id

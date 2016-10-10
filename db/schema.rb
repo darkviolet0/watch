@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010100534) do
+ActiveRecord::Schema.define(version: 20161010102317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(version: 20161010100534) do
     t.integer  "rating_speed"
     t.integer  "users_id"
     t.integer  "cycle_track_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "rating_pleasure"
+    t.integer  "rating_security"
     t.index ["cycle_track_id"], name: "index_cycle_track_comments_on_cycle_tracks_id", using: :btree
     t.index ["users_id"], name: "index_cycle_track_comments_on_users_id", using: :btree
   end
