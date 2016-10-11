@@ -28,6 +28,9 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'gretel'
 gem 'active_skin'
+gem 'twitter'
+gem 'twitter-text'
+
 
 
 group :development do

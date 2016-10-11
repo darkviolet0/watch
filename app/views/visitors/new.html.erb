@@ -277,7 +277,6 @@
 
 
 
-
     
 
 <!-- Contact Section -->
@@ -379,6 +378,38 @@ Nous souhaitons également associer des partenaires d'autres pays de la communau
       </div><!-- /.contact-section -->
     </section><!-- /#contact -->
     <!-- Contact Section End -->
+
+<!--Tweet Section-->
+    <div id="tweet-section">
+      <div class="tweet-section parallax-style">
+        <div class="parallax-overlay section-padding">
+          <div class="container">
+            <div class="hex twitter-icon-hex">
+              <div class="tweet-icon">
+                <i class="fa fa-twitter"></i>
+              </div><!-- /.tweet-icon -->
+            </div><!-- /.witter-icon-hex -->
+            <p class="tweet-text">
+            dernier tweet de  <a href="http://www.twitter.com/WatchCoop">@WatchCoop</a><br>
+            
+             <% tweets = @client.user_timeline.first(1) %>
+             <% tweets.each do |t| %>
+              <%= auto_link(t.text).html_safe %>
+            
+
+            </p><!-- /.tweet-text -->
+            <p class="tweet-time">
+                il y a <%= distance_of_time_in_words t.created_at, Time.now %>
+            </p><!-- /.tweet-time -->
+             <% end %> 
+          </div><!-- /.container -->
+        </div><!-- /.parallax-overlay -->
+      </div><!-- /.tweet-section -->
+    </div><!-- /.tweet-section -->
+    <!--Tweet Section End-->
+
+
+
 
 
 
