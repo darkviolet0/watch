@@ -10,8 +10,11 @@
                       <p class="section-description"><%= @site.description %></p>
                       
                 <h2 class="post-title" style="color: black;">
-                  <%= @track.name %>
+                  <%= @track.name %><div class="col-md-3">
+                  <img src="https://maps.googleapis.com/maps/api/streetview?size=600x600&location=<%= @track.lat %>,<%= @track.long %>&heading=151.78&pitch=-0.76&key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I" alt="@track.name"/>
+                </div>
                 </h2>
+                
                 <p class="post-meta">
                   Nature : <%= @track.typology %> |
                   <% if @track.side %>
@@ -19,7 +22,8 @@
                   <% end %>
                   
                   <% if @track.CycleTrackComment.length != 0 %>
-                   | Notes moyennes : 
+                   <br>
+                   Notes moyennes : <br> Vitesse 
                    <% @track.CycleTrackComment.average(:rating_speed).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_speed).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
@@ -31,8 +35,35 @@
                           <% 
                           count2 += 1
                         end%>
+                        | Agrément 
+                        <% @track.CycleTrackComment.average(:rating_pleasure).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_pleasure).round %>
+                    <% count = count2 = 1 %>
+                        <% while (count <=  avg_rating) %>
+                          <%= image_tag("star-on.png", style: "width: 16px !important") %>
+                          <% count += 1 %>
+                        <% end %>
+                        <%while (count2 <= (5 -  avg_rating)) %>
+                          <%= image_tag("star-off.png", style: "width: 16px !important") %>
+                          <% 
+                          count2 += 1
+                        end%>
+                        | Sécurité 
+                        <% @track.CycleTrackComment.average(:rating_security).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_security).round %>
+                    <% count = count2 = 1 %>
+                        <% while (count <=  avg_rating) %>
+                          <%= image_tag("star-on.png", style: "width: 16px !important") %>
+                          <% count += 1 %>
+                        <% end %>
+                        <%while (count2 <= (5 -  avg_rating)) %>
+                          <%= image_tag("star-off.png", style: "width: 16px !important") %>
+                          <% 
+                          count2 += 1
+                        end%>
+
+                  
                   <% end %>
-                </p>
+
+                </p><br>
                 <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
                 <% if @track.CycleTrackComment.length != 0 %>
               <%= @track.CycleTrackComment.length %> commentaire(s)
@@ -218,6 +249,26 @@
         <% end %>
 
          <div id="searchdisplay" name="searchdisplay"></div>
+
+
+         <div class="widget clearfix">
+            <h3 class="title">
+              Les + commentées
+            </h3>
+            <% ct = CycleTrackComment.most_commented(5)  %>
+            <ul class="popular-post">
+             <% ct.each do |c| %> 
+              <li>
+                <img src="https://maps.googleapis.com/maps/api/streetview?size=270x270&location=<%= CycleTrack.find(c[0]).lat %>,<%= CycleTrack.find(c[0]).long %>&heading=151.78&pitch=-0.76&key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I" alt="location image"> 
+                <a href="?track_id=<%= c[0] %>"><%= CycleTrack.find(c[0]).name %></a><br>
+                <div class="popular-post-comment"><%= c[1] %> Commentaires</div>
+              </li>
+              <% end %>
+            </ul><!-- /.latest-post -->
+          </div><!-- /.widget -->
+
+
+
 
         </aside><!-- /#blog-sidebar -->   
       </div> <!-- /.row -->
