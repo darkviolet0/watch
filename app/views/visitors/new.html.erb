@@ -305,7 +305,7 @@
                   Laissez nous un message
                 </h3>
 
-                <form class="contact-form" id="contact-form" action="/message" method="post">
+                <form class="contact-form" id="contact-form" action="/message" method="post" data-remote="true">
                 <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
                   <div id="name_error" class="error">
                   <%= image_tag("email/error.png", :alt => "Error!")%>

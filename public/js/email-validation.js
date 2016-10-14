@@ -38,7 +38,7 @@
                 /* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
                 $.post("/message", $("#contact-form").serialize(),function(result){
                     //Check the result set from controller file.
-                    if(result == 'sent'){
+                    
                         //If the email is sent successfully, remove the submit button
                          $('#name').remove();
                          $('#email').remove();
@@ -46,12 +46,6 @@
                          $('#send_message').remove();
                         //Display the success message
                         $('#mail_success').fadeIn(500);
-                    }else{
-                        //Display the error message
-                        $('#mail_fail').fadeIn(500);
-                        // Enable the submit button again
-                        $('#send_message').removeAttr('disabled').attr('value', 'Send The Message');
-                    }
                 });
             }
         });    

@@ -24,19 +24,7 @@ before_action :set_theme, only: [:show]
   end
 
   def subscribe
-      subject = '<watch> Contact sur le site'; 
-      to = "fabrice@watch.coop";  
-
-      headers  = 'MIME-Version: 1.0' + "\r\n";
-      headers << "From: " + params[:email] + "\r\n"; 
-      headers << 'Content-type: text/html; charset=iso-8859-1' + "\r\n";
-
-      message = 'Name: ' + params[:name] + "<br>";
-      message << params[:message];
-
-      respond_to do |format|
-        format.js
-       end  
+      
       
 #      if (@mail($to, $ccr_subject, $ccr_message, $headers))
 #        puts 'sent'
@@ -44,6 +32,15 @@ before_action :set_theme, only: [:show]
 #        puts 'failed'
 #      end
 
+  end
+
+   def contact
+        # Tell the UserMailer to send a contact email 
+        @name = params[:name]
+        UserMailer.contact_email(params[:email], params[:name], params[:message]).deliver_now
+        respond_to do |format|
+          format.js
+        end
   end
 
 

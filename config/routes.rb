@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   match '/searchct', to: 'sites#search', via: [:get]
-  match '/message', to: 'visitors#subscribe', via: [:post]
+  match '/message', to: 'visitors#contact', via: [:post]
   resources :cycle_track_comments
   root to: 'visitors#new'
   

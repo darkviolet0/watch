@@ -1,8 +1,8 @@
 class UserMailer < ApplicationMailer
-  default from: "do-not-reply@example.com"
 
-  def contact_email(contact)
-    @contact = contact
-    mail(to: Rails.application.secrets.owner_email, from: @contact.email, :subject => "Website Contact")
-  end
+	def contact_email(email, name, message)
+		mail(to: 'contact@watch.coop', from: email , subject: '<watch> CONTACT SITE', body: message)
+	end
+
+
 end
