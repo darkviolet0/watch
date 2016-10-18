@@ -12,6 +12,6 @@ ActiveAdmin.register Site do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+ permit_params :location, :latitude, :longitude, :description, :theme_id
 
 end

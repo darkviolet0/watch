@@ -3,7 +3,7 @@ class SitesController < InheritedResources::Base
 
 def show
 	@site = Site.find(params[:id])
-	@cycle_tracks = CycleTrack.all  
+	@cycle_tracks = CycleTrack.where(id_site: params[:id])
 
   if params[:track_id].present? 
     t_id = params[:track_id] 
@@ -14,7 +14,10 @@ def show
 	if params[:track_id].present? || flash[:track_id]
   		@track = @cycle_tracks.find(t_id)
 	else
-  		@track = @cycle_tracks[0]
+  		if @cycle_tracks[0].present?
+        @track = @cycle_tracks[0]
+      else @track = CycleTrack.new
+      end  
 	end
 end
 
@@ -22,7 +25,9 @@ end
 def search
     if params[:search].present?
        t = CycleTrack.arel_table
-       @searchresults = CycleTrack.where(t[:name].matches("%#{params[:search]}%"))
+       #@searchresults = CycleTrack.where(t[:name].matches("%#{params[:search]}%"))
+       puts params[:id_site]
+       @searchresults = CycleTrack.where("name like ? and id_site = ?", "%#{params[:search]}%", params[:id_site])
        respond_to do |format|
         format.js
        end

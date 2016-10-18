@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010102317) do
+ActiveRecord::Schema.define(version: 20161018143845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,7 +56,9 @@ ActiveRecord::Schema.define(version: 20161010102317) do
     t.datetime "updated_at",      null: false
     t.integer  "rating_pleasure"
     t.integer  "rating_security"
+    t.integer  "id_site"
     t.index ["cycle_track_id"], name: "index_cycle_track_comments_on_cycle_tracks_id", using: :btree
+    t.index ["id_site"], name: "index_cycle_track_comments_on_id_site", using: :btree
     t.index ["users_id"], name: "index_cycle_track_comments_on_users_id", using: :btree
   end
 
@@ -71,6 +73,8 @@ ActiveRecord::Schema.define(version: 20161010102317) do
     t.integer  "district"
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
+    t.integer  "id_site"
+    t.index ["id_site"], name: "index_cycle_tracks_on_id_site", using: :btree
   end
 
   create_table "sites", force: :cascade do |t|
