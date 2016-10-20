@@ -9,36 +9,61 @@
   <li><%= link_to(@site.location, controller: 'sites', action: 'show') %></li>
 </ul>
 
+<% 
+  if @track.name.present?
+    lat = @track.lat
+    long = @track.long
+  else
+    lat = @site.latitude
+    long = @site.longitude
+  end
+%>
+
           <!-- Post Box-->
           <div class="row post-box">
               <article class="post-content">
                       <h2 class="section-title"><%= @site.location %></h2>
                       <p class="section-description"><%= @site.description %></p>
-                      
-                <h2 class="post-title" style="color: black;">
-                  <%= @track.name %><div class="col-md-3">
-                  <% 
-                    if @track.name.present?
-                      lat = @track.lat
-                      long = @track.long
-                    else
-                      lat = @site.latitude
-                      long = @site.longitude
-                    end
-                    %>
-                  <img src="https://maps.googleapis.com/maps/api/streetview?size=600x600&location=<%= lat %>,<%= long %>&heading=151.78&pitch=-0.76&key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I" alt="@track.name"/>
-                </div>
-                </h2>
-                
+                  <div class="col-md-5">
+                      <!-- <h2 class="post-title" style="color: black;">
+                          <%= @track.name %>
+                      </h2> -->
+                    
+                       
+ 
+                      <div id="gallery-container" class="gallery-container">
+                        <div class="gallery-item element-from-bottom">
+                                      <figure class="item">
+                                        <img src="https://maps.googleapis.com/maps/api/streetview?size=300x250&location=<%= lat %>,<%= long %>&heading=151.78&pitch=-0.76&key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I" alt="<%= @track.name %>">
+                                        <div class="item-link">
+                                          <a class="link-hex" href="https://maps.googleapis.com/maps/api/streetview?size=600x500&location=<%= lat %>,<%= long %>&heading=151.78&pitch=-0.76&key=AIzaSyBnzbXu9-aqom3Yy96FnlGFL2ZFU3C5r8I" data-rel="prettyPhoto">
+                                            <span>
+                                              <i class="fa fa-plus"></i>
+                                            </span>
+                                          </a>
+                                        </div><!-- /.item-link -->
+                                        <figcaption class="item-description">
+                                          <h4 class="item-title">
+                                            <%= @track.name %>
+                                          </h4><!-- /.item-title -->
+                                          <p class="gallery-item-description">
+                                             Nature : <%= @track.typology %> |
+                                          <% if @track.side %>
+                                            Côté : <%= @track.side %> 
+                                          <% end %>
+                                          </p><!-- /.gallery-item-description -->
+                                        </figcaption>
+                                      </figure>
+                          </div><!-- /.gallery-item -->
+                      </div><!-- /gallery-container -->
+                  </div>
                 <p class="post-meta">
-                  Nature : <%= @track.typology %> |
-                  <% if @track.side %>
-                    Côté : <%= @track.side %> 
-                  <% end %>
+                  Nature : <%= @track.typology %> | <% if @track.side %> Côté : <%= @track.side %> <% end %>
                   
                   <% if @track.CycleTrackComment.length != 0 %>
                    <br>
-                   Notes moyennes : <br> Vitesse 
+                   <strong>Notes moyennes</strong>  
+                   <br> Vitesse 
                    <% @track.CycleTrackComment.average(:rating_speed).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_speed).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
@@ -50,7 +75,7 @@
                           <% 
                           count2 += 1
                         end%>
-                        | Agrément 
+                        <br> Agrément 
                         <% @track.CycleTrackComment.average(:rating_pleasure).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_pleasure).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
@@ -62,7 +87,7 @@
                           <% 
                           count2 += 1
                         end%>
-                        | Sécurité 
+                        <br> Sécurité 
                         <% @track.CycleTrackComment.average(:rating_security).nil? ? avg_rating = 0 : avg_rating = @track.CycleTrackComment.average(:rating_security).round %>
                     <% count = count2 = 1 %>
                         <% while (count <=  avg_rating) %>
@@ -74,18 +99,18 @@
                           <% 
                           count2 += 1
                         end%>
-
-                  
+                        <br>
+                    <% if @track.CycleTrackComment.length != 0 %>
+                        <%= @track.CycleTrackComment.length %> commentaire(s)
+                    <% else %>
+                      Pas de commentaires.
+                    <% end %>
                   <% end %>
-
-                </p><br>
                 <div id="googleMaps" class="google-map-container"></div><!-- /#google-map-->
-                <% if @track.CycleTrackComment.length != 0 %>
-              <%= @track.CycleTrackComment.length %> commentaire(s)
-            <% else %>
-              Pas de commentaires.
-            <% end %>
+                
               </article> <!-- /.post-content -->
+                    
+
           </div><!-- /#post-box --><!-- /.row -->
           <!-- Post Box End -->
 
@@ -219,8 +244,6 @@
                           <input type="radio" class="rating-input" id="rating_security-input-1-1" name="rating_security" value="1" />
                           <label for="rating_security-input-1-1" class="rating-star"></label>
                   </span>
-
-
                   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
                   <%= tag(:input, :type => "hidden", :name => "track_id", :value => @track.id) %> 
                   <%= tag(:input, :type => "hidden", :name => "id_site", :value => @site.id) %> 
@@ -247,7 +270,7 @@
               Vous pouvez sélectionner une portion dans la liste déroulante ou effectuer une recherche, pour chaque portion vous pouvez noter et commenter votre expérience personnelle.
             </p><!-- /.widget-content -->
           <!-- cycle tracks elements list -->
-                <select id= "track_select" class="form-control inputstl" style="width: 100%" onchange="">
+                <select id= "track_select" class="form-control inputstl" style="width: 95%">
                   <% 
                   @cycle_tracks.each do |ct| %>
                     <option value="<%= ct.id %>"><%= ct.name.to_s + " - " + ct.typology.to_s %></option>
@@ -260,7 +283,7 @@
           
         <%= form_tag("/searchct?id_site=" + @site.id.to_s, id: "search-form", method: "get", remote: true, class: "sidebar-search  clearfix") do %>
           <input class="form-control" type="text" name="search" id="search" placeholder="Trouver une portion" required>
-          <button class="btn"><i class="fa fa-search"></i></button>
+          <span class="btn"><i class="fa fa-search"></i></span>
         <% end %>
 
          <div id="searchdisplay" name="searchdisplay"></div>
@@ -282,7 +305,22 @@
             </ul><!-- /.latest-post -->
           </div><!-- /.widget -->
 
-
+           <div class="widget clearfix">
+            <h3 class="title">
+              Top contributeurs
+            </h3>
+            <% ct = CycleTrackComment.top_users(5, @site.id)  %>
+            <ul class="popular-post">
+             <% ct.each do |c| %> 
+              <li>
+              <% top_user = User.find(c[0]) %>
+                <img class="img-circle" src="<%= top_user.image %>?type=small" alt="location image"> 
+                <%= top_user.name %><br>
+                <div class="popular-post-comment"><%= c[1] %> Commentaires</div>
+              </li>
+              <% end %>
+            </ul><!-- /.latest-post -->
+          </div><!-- /.widget -->
 
 
         </aside><!-- /#blog-sidebar -->   
@@ -324,11 +362,6 @@ $('#track_select').change(function() {
                 streetViewControl: true
             });
 
-
-             
-                
-
-
             var <%= "chris"+@track.id.to_s %> = new google.maps.Marker({
                 position: {lat: <%= lat %>, lng: <%= long %>},
                 map: map
@@ -336,9 +369,6 @@ $('#track_select').change(function() {
             
           }
             
-
-
-
             function isMobile() { 
               return ('ontouchstart' in document.documentElement);
             }
