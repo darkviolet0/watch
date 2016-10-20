@@ -8,6 +8,7 @@ def create
   @comment.rating_pleasure = params[:rating_pleasure]
   @comment.rating_security = params[:rating_security]
   @comment.cycle_track_id = params[:track_id]
+  @comment.id_site = params[:id_site]
   @comment.save
   c_id = @comment.id
   redirect_to :controller => 'sites', :action => 'show', :id => params[:id_site], :track_id => params[:track_id], anchor: "comment-" + c_id.to_s

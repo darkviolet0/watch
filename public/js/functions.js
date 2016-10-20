@@ -12,6 +12,21 @@ jQuery(window).on('scroll', function (){
     jQuery('#main-menu').removeClass('menu-bg');
   }
 
+
+/* ------------------------- Added for top carousel links ------------------------------ */
+/*$('a[href^="#about2"]').click(function(){
+  var the_id = $(this).attr("href");
+
+  $('html, body').animate({
+    scrollTop:$(the_id).offset().top - 60
+  }, 1000);
+
+
+  return false;
+});*/ 
+// not working yet
+
+
   
   /*----------------- prettyPhoto Image Gallery -----------------*/
   jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({social_tools:false});

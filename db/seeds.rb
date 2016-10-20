@@ -42,15 +42,15 @@ csv.each do |row|
   cd = CycleTrack.new
   cd.id = row['OBJECTID']
   cd.district = row['ARRDT']
-  cd.typology = row['TYPOLOGIE']
-  cd.name = row['TYPE_VOIE'] + " " + row['NOM_VOIE']
-  cd.side = row['SENS_VELO']
+  cd.typology = row['TYPOLOGIE'].to_s.downcase
+  cd.name = row['TYPE_VOIE'].to_s.downcase + " " + row['NOM_VOIE'].to_s.downcase
+  cd.side = row['SENS_VELO'].to_s.downcase
   cd.geometry = row['geo_shape']
-  cd.long = row['geo_point_2d'].split(/,/).(0)
-  cd.lat = row['geo_point_2d'].split(/,/).(0) 
+  cd.long = row['geo_point_2d'].split(/,/).last
+  cd.lat = row['geo_point_2d'].split(/,/).first
   cd.id_site = "4"
-  #cd.save
-  puts "#{cd.name}  #{cd.long} #{row['X_LONG']} saved"
+  cd.save
+  puts "#{cd.name}  #{cd.long} #{cd.lat} saved"
 end
 
 puts "There are now #{CycleTrack.count} rows in the cycle_data table"

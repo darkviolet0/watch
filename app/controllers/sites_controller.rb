@@ -3,7 +3,8 @@ class SitesController < InheritedResources::Base
 
 def show
 	@site = Site.find(params[:id])
-	@cycle_tracks = CycleTrack.where(id_site: params[:id])
+	@Theme = Theme.find(@site.theme_id) 
+  @cycle_tracks = CycleTrack.where(id_site: params[:id])
 
   if params[:track_id].present? 
     t_id = params[:track_id] 
